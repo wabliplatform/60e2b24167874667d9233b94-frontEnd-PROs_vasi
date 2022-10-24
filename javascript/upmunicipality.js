@@ -30,10 +30,20 @@ document.getElementById("ix9ow").addEventListener("click", event => {
 function initializearrayixpn2(data) {
   arrayixpn2 = data.map(item => ({
     value: item._id,
-    liValue: item[' ']
+    liValue: item['cname']
   }));
 }
-
+document.addEventListener('alignmcandidates', function(e) {
+  const advanceSelect = document.getElementById('itchp');
+  const selectedElement = advanceSelect.getAttribute('selected-element');
+  if (!selectedElement) return;
+  [...advanceSelect.querySelectorAll("[annotationname]")].forEach(
+    optionElement => {
+      if (optionElement.value === selectedElement)
+        optionElement.setAttribute("selected", true);
+    }
+  );
+});
  function calculateSize(img, maxWidth, maxHeight) {
       let width = img.width;
       let height = img.height;
@@ -154,7 +164,7 @@ document.getElementById('ilubl').onclick = (event) => {
         document.querySelector('[annotationname = mimage]').name = response.body.query.mimage.name ;
       }
        } catch (e) { console.log(e) };try { 
-        document.querySelector('[annotationname = mcandidates]').setAttribute('selected-element',response.body.query.mcandidates.undefined);
+        document.querySelector('[annotationname = mcandidates]').setAttribute('selected-element',response.body.query.mcandidates.cname);document.dispatchEvent(new Event("alignmcandidates"));
         const insideSubdocument = document.querySelector("[annotationname = 'mcandidates']");
         if (insideSubdocument !==null) {
           const tableData = response.body.query.mcandidates;
@@ -165,7 +175,15 @@ document.getElementById('ilubl').onclick = (event) => {
       if(tableDataElement.length < index) {
         return;
       }
-      
+       try {
+      const attributeSubdocumentElement = tableDataElement[
+        index
+      ].querySelector("[annotationname = 'cname']");
+      if (attributeSubdocumentElement !== null) {
+        attributeSubdocumentElement.textContent = tableData[tableData.length - index -1].cname;
+      }
+    }
+    catch(e) {console.log(e);};
       
       map.set(
         tableDataElement[index].getAttribute("id"),
@@ -208,11 +226,21 @@ document.getElementById('ilubl').onclick = (event) => {
     data.forEach((item,i) => {
     if(subDataElements.length > i)
       {
-        console.log('There are no inside data elements');
+        try { 
+      const insideSubDataElement = subDataElements[i].querySelector("[annotationname = 'cname']");
+      if(insideSubDataElement !== null){
+        insideSubDataElement.textContent = data[data.length -i -1].cname;
+        insideSubDataElement.value=data[data.length -i -1]._id;
+      }
+      else if(subDataElements[i].getAttribute('annotationname') === 'cname'){
+        subDataElements[i].textContent = data[data.length -i -1].cname;
+        subDataElements[i].value=data[data.length -i -1]._id;
+      }
+     } catch (e) { console.log(e) };
         map.set(subDataElements[i].getAttribute('id'), data[data.length-i-1])
         
       }
-      
+      document.dispatchEvent(new Event("alignmcandidates"))
     });
 
     window.localStorage.setItem('data', JSON.stringify(Array.from(map.entries())));
