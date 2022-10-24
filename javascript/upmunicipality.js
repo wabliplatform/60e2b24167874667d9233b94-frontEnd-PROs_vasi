@@ -193,4 +193,28 @@ document.getElementById('ilubl').onclick = (event) => {
           response.body.query.mcandidates
         );
       }
-     } catch (e) { console.log(e) };window.localStorage.setItem('data', JSON.stringify(Array.from(map.entries())));}});};
+     } catch (e) { console.log(e) };window.localStorage.setItem('data', JSON.stringify(Array.from(map.entries())));}});apiMunicipalityApi.getAllmunicipality((error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); const subDataElements =[...document.getElementById("i5c1x").querySelectorAll( "[dataitem='true']" )].filter(
+    (element, index, array) =>
+    !array.reduce((hasAncestorFlag, dataItem) => hasAncestorFlag || (element.compareDocumentPosition(dataItem) & Node.DOCUMENT_POSITION_CONTAINS) === 8, false)
+  );const map = new Map();
+    if( data.length > subDataElements.length){
+      for(let i = 0; i <=  data.length - subDataElements.length; i++){
+        let parentNode = subDataElements[0].parentNode;
+        let child = parentNode.childNodes[0].cloneNode(true);
+        parentNode.appendChild(child);
+        subDataElements.push(child);
+      }
+    }
+    data.forEach((item,i) => {
+    if(subDataElements.length > i)
+      {
+        console.log('There are no inside data elements');
+        map.set(subDataElements[i].getAttribute('id'), data[data.length-i-1])
+        
+      }
+      
+    });
+
+    window.localStorage.setItem('data', JSON.stringify(Array.from(map.entries())));
+    
+    [...subDataElements].forEach((element,index) => {if(index >= data.length) subDataElements[index].style.display = 'none';})}});};
