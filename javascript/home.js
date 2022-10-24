@@ -1,6 +1,23 @@
 let apiMunicipalityApi = new TempApi.MunicipalityApi();import TempApi from '../src/index';document.getElementById('i56eh').onclick = (event) => {
     event.preventDefault();
-    {   location.href= '/mcandidates' ;}};window.onload = () => {apiMunicipalityApi.getAllmunicipality((error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); const subDataElements =[...document.getElementById("iof5e").querySelectorAll( "[dataitem='true']" )].filter(
+    {  
+      let transitionId = window.location.href.split('/').at(-1);
+      let parentId = "";
+      const storedData = window.localStorage.getItem("data");
+      const newMap = new Map(JSON.parse(storedData));
+      newMap.forEach((value, key) => {
+        if (
+          document.getElementById(key) !== null &&
+          document
+            .getElementById(key)
+            .contains(document.getElementById("i56eh")) === true &&
+            document.getElementById(key).contains(document.getElementById(parentId)) === false
+        ) {
+          transitionId = value._id;
+          parentId = key;
+        }
+      });
+     location.href= '/mcandidates/' + transitionId;}};window.onload = () => {apiMunicipalityApi.getAllmunicipality((error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); const subDataElements =[...document.getElementById("iof5e").querySelectorAll( "[dataitem='true']" )].filter(
     (element, index, array) =>
     !array.reduce((hasAncestorFlag, dataItem) => hasAncestorFlag || (element.compareDocumentPosition(dataItem) & Node.DOCUMENT_POSITION_CONTAINS) === 8, false)
   );const map = new Map();  data.forEach((item,i) => {
