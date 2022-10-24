@@ -1,6 +1,4 @@
-let apiCandidateApi = new TempApi.CandidateApi();import TempApi from '../src/index';document.getElementById('if2fd').onclick = (event) => {
-    event.preventDefault();
-    {   location.href= '/home' ;}};window.onload = () => {let candidateId = window.location.pathname.replace('/candidate/','');apiCandidateApi.getcandidate( candidateId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); try { 
+let apiCandidateApi = new TempApi.CandidateApi();import TempApi from '../src/index';window.onload = () => {let candidateId = window.location.pathname.replace('/candidate/','');apiCandidateApi.getcandidate( candidateId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); try { 
       if(response.body.query.cimage !== undefined){
         if(document.querySelector('[annotationname = cimage]').getAttribute('type') === 'file'){
           document.querySelector('[annotationname = cimage]').setAttribute('data-image-base64',response.body.query.cimage.data);

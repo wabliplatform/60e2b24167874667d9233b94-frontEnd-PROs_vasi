@@ -1,6 +1,4 @@
-let apiMunicipalityApi = new TempApi.MunicipalityApi();import TempApi from '../src/index';let apiCandidateApi = new TempApi.CandidateApi();document.getElementById('if2fd').onclick = (event) => {
-    event.preventDefault();
-    {   location.href= '/home' ;}};
+let apiMunicipalityApi = new TempApi.MunicipalityApi();import TempApi from '../src/index';let apiCandidateApi = new TempApi.CandidateApi();
  function calculateSize(img, maxWidth, maxHeight) {
       let width = img.width;
       let height = img.height;
@@ -149,7 +147,7 @@ document.addEventListener('alignmcandidates', function(e) {
         }
         document.querySelector('[annotationname = mimage]').name = response.body.query.mimage.name;
       }
-      document.querySelector('[annotationname = mname]').value = response.body.query.mname ;document.querySelector('[annotationname = mcandidates]').textContent = response.body.query.mcandidates ;}});};window.onload = () => {let municipalityId = window.location.pathname.replace('/updatemun/','');apiMunicipalityApi.getmunicipality( municipalityId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); const map = new Map();try { document.querySelector('[annotationname = mname]').value = response.body.query.mname; } catch (e) { console.log(e) };try { 
+      document.querySelector('[annotationname = mname]').value = response.body.query.mname ;document.querySelector('[annotationname = mcandidates]').textContent = response.body.query.mcandidates ;{   location.href= '/home' ;}}});};window.onload = () => {let municipalityId = window.location.pathname.replace('/updatemun/','');apiMunicipalityApi.getmunicipality( municipalityId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); const map = new Map();try { document.querySelector('[annotationname = mname]').value = response.body.query.mname; } catch (e) { console.log(e) };try { 
       if(response.body.query.mimage !== undefined){
         if(document.querySelector('[annotationname = mimage]').getAttribute('type') === 'file'){
           document.querySelector('[annotationname = mimage]').setAttribute('data-image-base64',response.body.query.mimage.data);

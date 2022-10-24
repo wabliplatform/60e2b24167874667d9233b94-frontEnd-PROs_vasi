@@ -1,6 +1,4 @@
-let apiCandidateApi = new TempApi.CandidateApi();import TempApi from '../src/index';document.getElementById('if2fd').onclick = (event) => {
-    event.preventDefault();
-    {   location.href= '/home' ;}};document.getElementById('ijg5f').onclick = (event) => {
+let apiCandidateApi = new TempApi.CandidateApi();import TempApi from '../src/index';document.getElementById('ijg5f').onclick = (event) => {
     event.preventDefault();
     {  
       let transitionId = window.location.href.split('/').at(-1);

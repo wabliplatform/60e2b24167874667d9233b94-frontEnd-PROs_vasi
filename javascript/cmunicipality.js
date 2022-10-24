@@ -1,6 +1,4 @@
-let apiCandidateApi = new TempApi.CandidateApi();import TempApi from '../src/index';let apiMunicipalityApi = new TempApi.MunicipalityApi();let municipality = new TempApi.Municipality();document.getElementById('if2fd').onclick = (event) => {
-    event.preventDefault();
-    {   location.href= '/home' ;}};
+let apiCandidateApi = new TempApi.CandidateApi();import TempApi from '../src/index';let apiMunicipalityApi = new TempApi.MunicipalityApi();let municipality = new TempApi.Municipality();
  function calculateSize(img, maxWidth, maxHeight) {
       let width = img.width;
       let height = img.height;

@@ -1,6 +1,12 @@
-let apiMunicipalityApi = new TempApi.MunicipalityApi();import TempApi from '../src/index';document.getElementById('if2fd-2').onclick = (event) => {
+let apiMunicipalityApi = new TempApi.MunicipalityApi();import TempApi from '../src/index';document.getElementById('ifuuql').onclick = (event) => {
     event.preventDefault();
-    {   location.href= '/home' ;}};window.onload = () => {let municipalityId = window.location.pathname.replace('/mcandidates/','');apiMunicipalityApi.getmunicipality( municipalityId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); const map = new Map();try { document.querySelector('[annotationname = mname]').textContent = response.body.query.mname; } catch (e) { console.log(e) };try { 
+    {   location.href= '/home' ;}};document.getElementById('if2fd').onclick = (event) => {
+    event.preventDefault();
+    {   location.href= '/home' ;}};document.getElementById('i7e5h').onclick = (event) => {
+    event.preventDefault();
+    {   location.href= '/cmunicipality' ;}};document.getElementById('iwssa').onclick = (event) => {
+    event.preventDefault();
+    {   location.href= '/ccandidate' ;}};window.onload = () => {let municipalityId = window.location.pathname.replace('/mcandidates/','');apiMunicipalityApi.getmunicipality( municipalityId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); const map = new Map();try { document.querySelector('[annotationname = mname]').textContent = response.body.query.mname; } catch (e) { console.log(e) };try { 
         document.querySelector('[annotationname = mcandidates]').setAttribute('selected-element',response.body.query.mcandidates.undefined);
         const insideSubdocument = document.querySelector("[annotationname = 'mcandidates']");
         if (insideSubdocument !==null) {

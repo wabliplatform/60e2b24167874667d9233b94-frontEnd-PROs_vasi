@@ -1,6 +1,4 @@
-let apiCandidateApi = new TempApi.CandidateApi();import TempApi from '../src/index';let candidate = new TempApi.Candidate();document.getElementById('if2fd').onclick = (event) => {
-    event.preventDefault();
-    {   location.href= '/home' ;}};
+let apiCandidateApi = new TempApi.CandidateApi();import TempApi from '../src/index';let candidate = new TempApi.Candidate();
  function calculateSize(img, maxWidth, maxHeight) {
       let width = img.width;
       let height = img.height;

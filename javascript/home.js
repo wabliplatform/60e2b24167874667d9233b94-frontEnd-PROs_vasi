@@ -1,6 +1,12 @@
-let apiMunicipalityApi = new TempApi.MunicipalityApi();import TempApi from '../src/index';document.getElementById('if2fd').onclick = (event) => {
+let apiMunicipalityApi = new TempApi.MunicipalityApi();import TempApi from '../src/index';document.getElementById('ifuuql').onclick = (event) => {
     event.preventDefault();
-    {   location.href= '/home' ;}};document.getElementById('i56eh').onclick = (event) => {
+    {   location.href= '/home' ;}};document.getElementById('if2fd').onclick = (event) => {
+    event.preventDefault();
+    {   location.href= '/home' ;}};document.getElementById('i7e5h').onclick = (event) => {
+    event.preventDefault();
+    {   location.href= '/cmunicipality' ;}};document.getElementById('iwssa').onclick = (event) => {
+    event.preventDefault();
+    {   location.href= '/ccandidate' ;}};document.getElementById('i56eh').onclick = (event) => {
     event.preventDefault();
     {  
       let transitionId = window.location.href.split('/').at(-1);
