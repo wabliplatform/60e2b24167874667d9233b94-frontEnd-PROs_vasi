@@ -2,7 +2,7 @@ let apiMunicipalityApi = new TempApi.MunicipalityApi();import TempApi from '../s
     event.preventDefault();
     {   location.href= '/home' ;}};document.getElementById('if2fd').onclick = (event) => {
     event.preventDefault();
-    {   location.href= '/allcandidates' ;}};document.getElementById('i4e9ar').onclick = (event) => {
+    {   location.href= '/home' ;}};document.getElementById('i4e9ar').onclick = (event) => {
     event.preventDefault();
     {   location.href= '/allcandidates' ;}};document.getElementById('i7e5h').onclick = (event) => {
     event.preventDefault();
@@ -46,7 +46,7 @@ let apiMunicipalityApi = new TempApi.MunicipalityApi();import TempApi from '../s
           parentId = key;
         }
       });
-     location.href= '/umunicipality/' + transitionId;}};document.getElementById('i3qnf').onclick = (event) => {
+     location.href= '//' + transitionId;}};document.getElementById('i3qnf').onclick = (event) => {
     event.preventDefault();
     {  
       let transitionId = window.location.href.split('/').at(-1);
