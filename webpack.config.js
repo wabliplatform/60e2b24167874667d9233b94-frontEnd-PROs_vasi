@@ -4,7 +4,7 @@ module.exports = {
   entry: {
 	'home' : './javascript/home.js',
 	'mcandidates' : './javascript/mcandidates.js',
-	'candidates' : './javascript/candidates.js',
+	'allcandidates' : './javascript/allcandidates.js',
 	'candidate' : './javascript/candidate.js',
 	'cmunicipality' : './javascript/cmunicipality.js',
 	'ccandidate' : './javascript/ccandidate.js',
