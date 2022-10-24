@@ -1,0 +1,73 @@
+
+[{
+    "methodType":"POST",
+    "methodName":"createcandidate",
+    "returnType":{
+      "primitive":false,
+      "jsType":"",
+      "modelName":"Candidate"
+    },
+    "importStatement":"import TempApi from '../src/index';",
+    "apiInstance":"let apiCandidateApi = new TempApi.CandidateApi();",
+    "importModelParameter":["let candidate = new TempApi.Candidate();"],
+    "modelNames":["candidate"],
+    "functionNextTemplate":"/**nextFunction*/",
+    "apiCallPromisified":"apiCandidateApi.createcandidate( candidate, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); /**nextFunction*/}});"
+  },{
+    "methodType":"DELETE",
+    "methodName":"deletecandidate",
+    "returnType":{
+
+      "primitive":"true",
+      "type":"null"
+    },
+    "importStatement":"import TempApi from '../src/index';",
+    "apiInstance":"let apiCandidateApi = new TempApi.CandidateApi();",
+    "importModelParameter":[],
+    "modelNames":[],
+    "functionNextTemplate":"/**nextFunction*/",
+    "apiCallPromisified":"apiCandidateApi.deletecandidate( candidateId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully.');/**nextFunction*/}});"
+  },{
+    "methodType":"GETALL",
+    "methodName":"getAllcandidate",
+    "returnType":{
+      "primitive":false,
+      "jsType":"Array",
+      "modelName":"[Candidate]"
+    },
+    "importStatement":"import TempApi from '../src/index';",
+    "apiInstance":"let apiCandidateApi = new TempApi.CandidateApi();",
+    "importModelParameter":[],
+    "modelNames":[],
+    "functionNextTemplate":"/**nextFunction*/",
+    "apiCallPromisified":"apiCandidateApi.getAllcandidate((error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); /**nextFunction*/}});"
+  },{
+    "methodType":"GET",
+    "methodName":"getcandidate",
+    "returnType":{
+      "primitive":false,
+      "jsType":"",
+      "modelName":"Candidate"
+    },
+    "importStatement":"import TempApi from '../src/index';",
+    "apiInstance":"let apiCandidateApi = new TempApi.CandidateApi();",
+    "importModelParameter":[],
+    "modelNames":[],
+    "functionNextTemplate":"/**nextFunction*/",
+    "apiCallPromisified":"apiCandidateApi.getcandidate( candidateId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); /**nextFunction*/}});"
+  },{
+    "methodType":"PUT",
+    "methodName":"updatecandidate",
+    "returnType":{
+      "primitive":false,
+      "jsType":"",
+      "modelName":"Candidate"
+    },
+    "importStatement":"import TempApi from '../src/index';",
+    "apiInstance":"let apiCandidateApi = new TempApi.CandidateApi();",
+    "importModelParameter":[],
+    "modelNames":[],
+    "functionNextTemplate":"/**nextFunction*/",
+    "apiCallPromisified":"apiCandidateApi.updatecandidate( candidateId, opts, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); /**nextFunction*/}});"
+  }
+]
