@@ -32,9 +32,9 @@ class ApiClient {
         /**
          * The base URL against which to resolve every API call's (relative) path.
          * @type {String}
-         * @default http://localhost:8090/v1
+         * @default http://83.212.100.226:3001/v1
          */
-        this.basePath = 'http://localhost:8090/v1'.replace(/\/+$/, '');
+        this.basePath = 'http://83.212.100.226:3001/v1'.replace(/\/+$/, '');
 
         /**
          * The authentication methods to be included for all API calls.
@@ -585,8 +585,8 @@ class ApiClient {
     hostSettings() {
         return [
             {
-              'url': "http://localhost:8090/v1",
-              'description': "local-host",
+              'url': "http://83.212.100.226:3001/v1",
+              'description': "solid-spoon",
             }
       ];
     }
