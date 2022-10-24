@@ -112,28 +112,9 @@ document.addEventListener('alignmcandidates', function(e) {
         optionElement.setAttribute("selected", true);
     }
   );
-});document.getElementById('i2xkh').onclick = (event) => {
+});document.getElementById('i0bg9').onclick = (event) => {
     event.preventDefault();
-    let municipalityId = window.location.pathname.replace('/updatemun/','');
-      if(municipalityId === '/updatemun' || municipalityId === ''){
-        let parentId = "";
-        const storedData = window.localStorage.getItem('data');
-        const newMap = new Map(JSON.parse(storedData));
-        newMap.forEach((value, key) => {
-          if (
-            document
-              .getElementById(key)
-              .contains(document.getElementById("i2xkh")) === true &&
-              document.getElementById(key).contains(document.getElementById(parentId)) === false
-          ) {
-            municipalityId = value._id;
-            parentId = key;
-          }
-        });
-      }
-    apiMunicipalityApi.deletemunicipality( municipalityId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully.');{   location.href= '/home' ;}}});};document.getElementById('i4qvx').onclick = (event) => {
-    event.preventDefault();
-    let municipalityId = window.location.pathname.replace('/updatemun/','');let municipality = new TempApi.Municipality();municipality['mimage'] = {
+    let municipalityId = window.location.pathname.replace('/umunicipality/','');let municipality = new TempApi.Municipality();municipality['mimage'] = {
         data: document.querySelector("[annotationname = 'mimage']").getAttribute("data-image-base64") !== null ? document.querySelector("[annotationname = 'mimage']").getAttribute("data-image-base64") : document.querySelector("[annotationname = 'mimage']").src,
         name: document.querySelector("[annotationname = 'mimage']").getAttribute("name")
       };municipality['mname'] = document.querySelector("[annotationname = 'mname']").value;municipality['mcandidates'] = document.querySelector("[annotationname = 'mcandidates']").textContent; let opts = {municipality};apiMunicipalityApi.updatemunicipality( municipalityId, opts, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); 
