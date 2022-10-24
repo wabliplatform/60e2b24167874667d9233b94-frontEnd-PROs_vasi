@@ -1,4 +1,4 @@
-let apiCandidateApi = new TempApi.CandidateApi();import TempApi from '../src/index';let apiMunicipalityApi = new TempApi.MunicipalityApi();
+let apiMunicipalityApi = new TempApi.MunicipalityApi();import TempApi from '../src/index';let apiCandidateApi = new TempApi.CandidateApi();
  function calculateSize(img, maxWidth, maxHeight) {
       let width = img.width;
       let height = img.height;
@@ -128,7 +128,89 @@ document.addEventListener('alignmcandidates', function(e) {
         }
         document.querySelector('[annotationname = mimage]').name = response.body.query.mimage.name;
       }
-      document.querySelector('[annotationname = mname]').value = response.body.query.mname ;document.querySelector('[annotationname = mcandidates]').textContent = response.body.query.mcandidates ;{   location.href= '/home' ;}}});};window.onload = () => {apiCandidateApi.getAllcandidate((error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); const subDataElements =[...document.getElementById("it4eg").querySelectorAll( "[dataitem='true']" )].filter(
+      document.querySelector('[annotationname = mname]').value = response.body.query.mname ;document.querySelector('[annotationname = mcandidates]').textContent = response.body.query.mcandidates ;{   location.href= '/home' ;}}});};document.getElementById('i0tym').onclick = (event) => {
+    event.preventDefault();
+    let municipalityId = window.location.pathname.replace('/umunicipality/','');
+      if(municipalityId === '/umunicipality' || municipalityId === ''){
+        let parentId = "";
+        const storedData = window.localStorage.getItem('data');
+        const newMap = new Map(JSON.parse(storedData));
+        newMap.forEach((value, key) => {
+          if (
+            document
+              .getElementById(key)
+              .contains(document.getElementById("i0tym")) === true &&
+              document.getElementById(key).contains(document.getElementById(parentId)) === false
+          ) {
+            municipalityId = value._id;
+            parentId = key;
+          }
+        });
+      }
+    apiMunicipalityApi.deletemunicipality( municipalityId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully.');{   location.href= '/home' ;}}});};window.onload = () => {let municipalityId = window.location.pathname.replace('/umunicipality/','');apiMunicipalityApi.getmunicipality( municipalityId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); const map = new Map();try { document.querySelector('[annotationname = mname]').value = response.body.query.mname; } catch (e) { console.log(e) };try { 
+      if(response.body.query.mimage !== undefined){
+        if(document.querySelector('[annotationname = mimage]').getAttribute('type') === 'file'){
+          document.querySelector('[annotationname = mimage]').setAttribute('data-image-base64',response.body.query.mimage.data);
+          let fileName = response.body.query.mimage.name;
+          let file = new File([response.body.query.mimage.data], fileName,{lastModified:new Date().getTime()}, 'utf-8');
+          let container = new DataTransfer();
+          container.items.add(file);
+
+          document.querySelector("[annotationname = mimage]").files = container.files;
+        }
+        else {
+          document.querySelector('[annotationname = mimage]').src = response.body.query.mimage.data ;
+        }
+        document.querySelector('[annotationname = mimage]').name = response.body.query.mimage.name ;
+      }
+       } catch (e) { console.log(e) };try { 
+        document.querySelector('[annotationname = mcandidates]').setAttribute('selected-element',response.body.query.mcandidates.cname);document.dispatchEvent(new Event("alignmcandidates"));
+        const insideSubdocument = document.querySelector("[annotationname = 'mcandidates']");
+        if (insideSubdocument !==null) {
+          const tableData = response.body.query.mcandidates;
+    
+    const tableDataElement = insideSubdocument.querySelectorAll("[dataitem='true']");
+    tableData.forEach((data,index) => {
+      if(tableDataElement.length < index) {
+        return;
+      }
+       try {
+      const attributeSubdocumentElement = tableDataElement[
+        index
+      ].querySelector("[annotationname = 'cname']");
+      if (attributeSubdocumentElement !== null) {
+        attributeSubdocumentElement.textContent = tableData[tableData.length - index -1].cname;
+      }
+    }
+    catch(e) {console.log(e);};
+      
+      map.set(
+        tableDataElement[index].getAttribute("id"),
+        tableData[tableData.length - index -1]
+      );
+    
+    });
+    
+      [...tableDataElement].forEach((element, index) => {
+        if (index >= tableData.length) {
+          tableDataElement[index].style.display = "none";
+        }
+        else {
+          tableDataElement[index].style.display = "";
+        }
+      });
+    
+    
+        }
+      if(response.body.query.mcandidates._id){
+        map.set(
+          document.querySelector(
+            "[annotationname = 'mcandidates']"
+          ).getAttribute("id"),
+          response.body.query.mcandidates
+        );
+      }
+     } catch (e) { console.log(e) };window.localStorage.setItem('data', JSON.stringify(Array.from(map.entries())));}});apiCandidateApi.getAllcandidate((error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); const subDataElements =[...document.getElementById("it4eg").querySelectorAll( "[dataitem='true']" )].filter(
     (element, index, array) =>
     !array.reduce((hasAncestorFlag, dataItem) => hasAncestorFlag || (element.compareDocumentPosition(dataItem) & Node.DOCUMENT_POSITION_CONTAINS) === 8, false)
   );const map = new Map();
