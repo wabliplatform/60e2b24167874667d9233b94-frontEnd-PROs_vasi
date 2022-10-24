@@ -1,4 +1,4 @@
-let apiMunicipalityApi = new TempApi.MunicipalityApi();import TempApi from '../src/index';let apiCandidateApi = new TempApi.CandidateApi();let municipality = new TempApi.Municipality();document.getElementById('if2fd').onclick = (event) => {
+let apiMunicipalityApi = new TempApi.MunicipalityApi();import TempApi from '../src/index';let apiCandidateApi = new TempApi.CandidateApi();document.getElementById('if2fd').onclick = (event) => {
     event.preventDefault();
     {   location.href= '/home' ;}};
  function calculateSize(img, maxWidth, maxHeight) {
@@ -114,13 +114,7 @@ document.addEventListener('alignmcandidates', function(e) {
         optionElement.setAttribute("selected", true);
     }
   );
-});document.getElementById('i0bg9').onclick = (event) => {
-    event.preventDefault();
-    municipality['mimage'] = {
-        data: document.querySelector("[annotationname = 'mimage']").getAttribute("data-image-base64") !== null ? document.querySelector("[annotationname = 'mimage']").getAttribute("data-image-base64") : document.querySelector("[annotationname = 'mimage']").src,
-        name: document.querySelector("[annotationname = 'mimage']").getAttribute("name")
-      };
-      municipality['mname'] = document.querySelector("[annotationname = 'mname']").value;municipality["mcandidates"] = [...document.querySelector("[annotationname = 'mcandidates']").querySelectorAll("[arrayvalue]")].map(li=> li.getAttribute('arrayvalue'));apiMunicipalityApi.createmunicipality( municipality, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); {   location.href= '/home' ;}}});};document.getElementById('i2xkh').onclick = (event) => {
+});document.getElementById('i2xkh').onclick = (event) => {
     event.preventDefault();
     let municipalityId = window.location.pathname.replace('/updatemun/','');
       if(municipalityId === '/updatemun' || municipalityId === ''){
@@ -139,7 +133,23 @@ document.addEventListener('alignmcandidates', function(e) {
           }
         });
       }
-    apiMunicipalityApi.deletemunicipality( municipalityId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully.');{   location.href= '/home' ;}}});};window.onload = () => {let municipalityId = window.location.pathname.replace('/updatemun/','');apiMunicipalityApi.getmunicipality( municipalityId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); const map = new Map();try { document.querySelector('[annotationname = mname]').value = response.body.query.mname; } catch (e) { console.log(e) };try { 
+    apiMunicipalityApi.deletemunicipality( municipalityId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully.');{   location.href= '/home' ;}}});};document.getElementById('i4qvx').onclick = (event) => {
+    event.preventDefault();
+    let municipalityId = window.location.pathname.replace('/updatemun/','');let municipality = new TempApi.Municipality();municipality['mimage'] = {
+        data: document.querySelector("[annotationname = 'mimage']").getAttribute("data-image-base64") !== null ? document.querySelector("[annotationname = 'mimage']").getAttribute("data-image-base64") : document.querySelector("[annotationname = 'mimage']").src,
+        name: document.querySelector("[annotationname = 'mimage']").getAttribute("name")
+      };municipality['mname'] = document.querySelector("[annotationname = 'mname']").value;municipality['mcandidates'] = document.querySelector("[annotationname = 'mcandidates']").textContent; let opts = {municipality};apiMunicipalityApi.updatemunicipality( municipalityId, opts, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); 
+      if(response.body.query.mimage !== undefined){
+
+        if(document.querySelector('[annotationname = mimage]').getAttribute('type') === 'file'){
+          document.querySelector('[annotationname = mimage]').setAttribute('data-image-base64',response.body.query.mimage.data);
+        }
+        else{
+          document.querySelector('[annotationname = mimage]').src = response.body.query.mimage.data;
+        }
+        document.querySelector('[annotationname = mimage]').name = response.body.query.mimage.name;
+      }
+      document.querySelector('[annotationname = mname]').value = response.body.query.mname ;document.querySelector('[annotationname = mcandidates]').textContent = response.body.query.mcandidates ;}});};window.onload = () => {let municipalityId = window.location.pathname.replace('/updatemun/','');apiMunicipalityApi.getmunicipality( municipalityId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); const map = new Map();try { document.querySelector('[annotationname = mname]').value = response.body.query.mname; } catch (e) { console.log(e) };try { 
       if(response.body.query.mimage !== undefined){
         if(document.querySelector('[annotationname = mimage]').getAttribute('type') === 'file'){
           document.querySelector('[annotationname = mimage]').setAttribute('data-image-base64',response.body.query.mimage.data);
