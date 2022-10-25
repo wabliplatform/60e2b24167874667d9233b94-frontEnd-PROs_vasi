@@ -7,8 +7,8 @@ module.exports = {
 	'allcandidates' : './javascript/allcandidates.js',
 	'candidate' : './javascript/candidate.js',
 	'cmunicipality' : './javascript/cmunicipality.js',
-	'ccandidate' : './javascript/ccandidate.js',
 	'upmunicipality' : './javascript/upmunicipality.js',
+	'ccandidate' : './javascript/ccandidate.js',
 },
   output: {
     path: path.resolve(__dirname, 'dist'),

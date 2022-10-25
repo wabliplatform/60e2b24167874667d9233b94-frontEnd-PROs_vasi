@@ -1,4 +1,14 @@
-let apiMunicipalityApi = new TempApi.MunicipalityApi();import TempApi from '../src/index';let apiCandidateApi = new TempApi.CandidateApi();let arrayixpn2 = [];
+let apiMunicipalityApi = new TempApi.MunicipalityApi();import TempApi from '../src/index';let apiCandidateApi = new TempApi.CandidateApi();document.getElementById('ifuuql').onclick = (event) => {
+    event.preventDefault();
+    {   location.href= '/home' ;}};document.getElementById('if2fd').onclick = (event) => {
+    event.preventDefault();
+    {   location.href= '/home' ;}};document.getElementById('i4e9ar').onclick = (event) => {
+    event.preventDefault();
+    {   location.href= '/allcandidates' ;}};document.getElementById('i7e5h').onclick = (event) => {
+    event.preventDefault();
+    {   location.href= '/cmunicipality' ;}};document.getElementById('iwssa').onclick = (event) => {
+    event.preventDefault();
+    {   location.href= '/ccandidate' ;}};let arrayixpn2 = [];
 document.getElementById("itom3").onclick = event => {
   event.preventDefault();
   const select = document.getElementById("itchp")
