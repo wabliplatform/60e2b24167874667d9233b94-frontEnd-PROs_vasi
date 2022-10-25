@@ -160,7 +160,7 @@ let apiCandidateApi = new TempApi.CandidateApi();import TempApi from '../src/ind
           parentId = key;
         }
       });
-     location.href= '/candidate/' + transitionId;}};window.onload = () => {let candidateId = window.location.pathname.replace('/mcandidates/','');apiCandidateApi.getcandidate( candidateId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); try { document.querySelector('[annotationname = cname]').textContent = response.body.query.cname; } catch (e) { console.log(e) };}});let candidateId = window.location.pathname.replace('/mcandidates/','');apiCandidateApi.getcandidate( candidateId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); try { 
+     location.href= '/candidate/' + transitionId;}};window.onload = () => {let candidateId = window.location.pathname.replace('/mcandidates/','');apiCandidateApi.getcandidate( candidateId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); try { document.querySelector('[annotationname = cname]').textContent = response.body.query.cname; } catch (e) { console.log(e) };try { 
       if(response.body.query.cimage !== undefined){
         if(document.querySelector('[annotationname = cimage]').getAttribute('type') === 'file'){
           document.querySelector('[annotationname = cimage]').setAttribute('data-image-base64',response.body.query.cimage.data);
@@ -176,4 +176,4 @@ let apiCandidateApi = new TempApi.CandidateApi();import TempApi from '../src/ind
         }
         document.querySelector('[annotationname = cimage]').name = response.body.query.cimage.name ;
       }
-       } catch (e) { console.log(e) };try { document.querySelector('[annotationname = cname]').textContent = response.body.query.cname; } catch (e) { console.log(e) };}});};
+       } catch (e) { console.log(e) };}});};
