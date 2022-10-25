@@ -46,7 +46,7 @@ let apiMunicipalityApi = new TempApi.MunicipalityApi();import TempApi from '../s
           parentId = key;
         }
       });
-     location.href= '/candidate/' + transitionId;}};document.getElementById('ifx5vl').onclick = (event) => {
+     location.href= '/candidate/' + transitionId;}};document.getElementById('isvnk').onclick = (event) => {
     event.preventDefault();
     {  
       let transitionId = window.location.href.split('/').at(-1);
@@ -58,14 +58,14 @@ let apiMunicipalityApi = new TempApi.MunicipalityApi();import TempApi from '../s
           document.getElementById(key) !== null &&
           document
             .getElementById(key)
-            .contains(document.getElementById("ifx5vl")) === true &&
+            .contains(document.getElementById("isvnk")) === true &&
             document.getElementById(key).contains(document.getElementById(parentId)) === false
         ) {
           transitionId = value._id;
           parentId = key;
         }
       });
-     location.href= '/candidate/' + transitionId;}};document.getElementById('iwtfpd').onclick = (event) => {
+     location.href= '/candidate/' + transitionId;}};document.getElementById('iq22h').onclick = (event) => {
     event.preventDefault();
     {  
       let transitionId = window.location.href.split('/').at(-1);
@@ -77,14 +77,14 @@ let apiMunicipalityApi = new TempApi.MunicipalityApi();import TempApi from '../s
           document.getElementById(key) !== null &&
           document
             .getElementById(key)
-            .contains(document.getElementById("iwtfpd")) === true &&
+            .contains(document.getElementById("iq22h")) === true &&
             document.getElementById(key).contains(document.getElementById(parentId)) === false
         ) {
           transitionId = value._id;
           parentId = key;
         }
       });
-     location.href= '/candidate/' + transitionId;}};document.getElementById('isaquq').onclick = (event) => {
+     location.href= '/candidate/' + transitionId;}};document.getElementById('izjcj').onclick = (event) => {
     event.preventDefault();
     {  
       let transitionId = window.location.href.split('/').at(-1);
@@ -96,14 +96,14 @@ let apiMunicipalityApi = new TempApi.MunicipalityApi();import TempApi from '../s
           document.getElementById(key) !== null &&
           document
             .getElementById(key)
-            .contains(document.getElementById("isaquq")) === true &&
+            .contains(document.getElementById("izjcj")) === true &&
             document.getElementById(key).contains(document.getElementById(parentId)) === false
         ) {
           transitionId = value._id;
           parentId = key;
         }
       });
-     location.href= '/candidate/' + transitionId;}};document.getElementById('iyrl6s').onclick = (event) => {
+     location.href= '/candidate/' + transitionId;}};document.getElementById('i6hm7').onclick = (event) => {
     event.preventDefault();
     {  
       let transitionId = window.location.href.split('/').at(-1);
@@ -115,14 +115,14 @@ let apiMunicipalityApi = new TempApi.MunicipalityApi();import TempApi from '../s
           document.getElementById(key) !== null &&
           document
             .getElementById(key)
-            .contains(document.getElementById("iyrl6s")) === true &&
+            .contains(document.getElementById("i6hm7")) === true &&
             document.getElementById(key).contains(document.getElementById(parentId)) === false
         ) {
           transitionId = value._id;
           parentId = key;
         }
       });
-     location.href= '/candidate/' + transitionId;}};document.getElementById('ije3m').onclick = (event) => {
+     location.href= '/candidate/' + transitionId;}};document.getElementById('ij509').onclick = (event) => {
     event.preventDefault();
     {  
       let transitionId = window.location.href.split('/').at(-1);
@@ -134,14 +134,14 @@ let apiMunicipalityApi = new TempApi.MunicipalityApi();import TempApi from '../s
           document.getElementById(key) !== null &&
           document
             .getElementById(key)
-            .contains(document.getElementById("ije3m")) === true &&
+            .contains(document.getElementById("ij509")) === true &&
             document.getElementById(key).contains(document.getElementById(parentId)) === false
         ) {
           transitionId = value._id;
           parentId = key;
         }
       });
-     location.href= '/candidate/' + transitionId;}};document.getElementById('izq2j').onclick = (event) => {
+     location.href= '/candidate/' + transitionId;}};document.getElementById('int3g').onclick = (event) => {
     event.preventDefault();
     {  
       let transitionId = window.location.href.split('/').at(-1);
@@ -153,159 +153,7 @@ let apiMunicipalityApi = new TempApi.MunicipalityApi();import TempApi from '../s
           document.getElementById(key) !== null &&
           document
             .getElementById(key)
-            .contains(document.getElementById("izq2j")) === true &&
-            document.getElementById(key).contains(document.getElementById(parentId)) === false
-        ) {
-          transitionId = value._id;
-          parentId = key;
-        }
-      });
-     location.href= '/candidate/' + transitionId;}};document.getElementById('inrxu').onclick = (event) => {
-    event.preventDefault();
-    {  
-      let transitionId = window.location.href.split('/').at(-1);
-      let parentId = "";
-      const storedData = window.localStorage.getItem("data");
-      const newMap = new Map(JSON.parse(storedData));
-      newMap.forEach((value, key) => {
-        if (
-          document.getElementById(key) !== null &&
-          document
-            .getElementById(key)
-            .contains(document.getElementById("inrxu")) === true &&
-            document.getElementById(key).contains(document.getElementById(parentId)) === false
-        ) {
-          transitionId = value._id;
-          parentId = key;
-        }
-      });
-     location.href= '/candidate/' + transitionId;}};document.getElementById('i86hm').onclick = (event) => {
-    event.preventDefault();
-    {  
-      let transitionId = window.location.href.split('/').at(-1);
-      let parentId = "";
-      const storedData = window.localStorage.getItem("data");
-      const newMap = new Map(JSON.parse(storedData));
-      newMap.forEach((value, key) => {
-        if (
-          document.getElementById(key) !== null &&
-          document
-            .getElementById(key)
-            .contains(document.getElementById("i86hm")) === true &&
-            document.getElementById(key).contains(document.getElementById(parentId)) === false
-        ) {
-          transitionId = value._id;
-          parentId = key;
-        }
-      });
-     location.href= '/candidate/' + transitionId;}};document.getElementById('iv01e').onclick = (event) => {
-    event.preventDefault();
-    {  
-      let transitionId = window.location.href.split('/').at(-1);
-      let parentId = "";
-      const storedData = window.localStorage.getItem("data");
-      const newMap = new Map(JSON.parse(storedData));
-      newMap.forEach((value, key) => {
-        if (
-          document.getElementById(key) !== null &&
-          document
-            .getElementById(key)
-            .contains(document.getElementById("iv01e")) === true &&
-            document.getElementById(key).contains(document.getElementById(parentId)) === false
-        ) {
-          transitionId = value._id;
-          parentId = key;
-        }
-      });
-     location.href= '/candidate/' + transitionId;}};document.getElementById('ibe5j').onclick = (event) => {
-    event.preventDefault();
-    {  
-      let transitionId = window.location.href.split('/').at(-1);
-      let parentId = "";
-      const storedData = window.localStorage.getItem("data");
-      const newMap = new Map(JSON.parse(storedData));
-      newMap.forEach((value, key) => {
-        if (
-          document.getElementById(key) !== null &&
-          document
-            .getElementById(key)
-            .contains(document.getElementById("ibe5j")) === true &&
-            document.getElementById(key).contains(document.getElementById(parentId)) === false
-        ) {
-          transitionId = value._id;
-          parentId = key;
-        }
-      });
-     location.href= '/candidate/' + transitionId;}};document.getElementById('if3iq').onclick = (event) => {
-    event.preventDefault();
-    {  
-      let transitionId = window.location.href.split('/').at(-1);
-      let parentId = "";
-      const storedData = window.localStorage.getItem("data");
-      const newMap = new Map(JSON.parse(storedData));
-      newMap.forEach((value, key) => {
-        if (
-          document.getElementById(key) !== null &&
-          document
-            .getElementById(key)
-            .contains(document.getElementById("if3iq")) === true &&
-            document.getElementById(key).contains(document.getElementById(parentId)) === false
-        ) {
-          transitionId = value._id;
-          parentId = key;
-        }
-      });
-     location.href= '/candidate/' + transitionId;}};document.getElementById('im2n9').onclick = (event) => {
-    event.preventDefault();
-    {  
-      let transitionId = window.location.href.split('/').at(-1);
-      let parentId = "";
-      const storedData = window.localStorage.getItem("data");
-      const newMap = new Map(JSON.parse(storedData));
-      newMap.forEach((value, key) => {
-        if (
-          document.getElementById(key) !== null &&
-          document
-            .getElementById(key)
-            .contains(document.getElementById("im2n9")) === true &&
-            document.getElementById(key).contains(document.getElementById(parentId)) === false
-        ) {
-          transitionId = value._id;
-          parentId = key;
-        }
-      });
-     location.href= '/candidate/' + transitionId;}};document.getElementById('ivrwn').onclick = (event) => {
-    event.preventDefault();
-    {  
-      let transitionId = window.location.href.split('/').at(-1);
-      let parentId = "";
-      const storedData = window.localStorage.getItem("data");
-      const newMap = new Map(JSON.parse(storedData));
-      newMap.forEach((value, key) => {
-        if (
-          document.getElementById(key) !== null &&
-          document
-            .getElementById(key)
-            .contains(document.getElementById("ivrwn")) === true &&
-            document.getElementById(key).contains(document.getElementById(parentId)) === false
-        ) {
-          transitionId = value._id;
-          parentId = key;
-        }
-      });
-     location.href= '/candidate/' + transitionId;}};document.getElementById('if93r').onclick = (event) => {
-    event.preventDefault();
-    {  
-      let transitionId = window.location.href.split('/').at(-1);
-      let parentId = "";
-      const storedData = window.localStorage.getItem("data");
-      const newMap = new Map(JSON.parse(storedData));
-      newMap.forEach((value, key) => {
-        if (
-          document.getElementById(key) !== null &&
-          document
-            .getElementById(key)
-            .contains(document.getElementById("if93r")) === true &&
+            .contains(document.getElementById("int3g")) === true &&
             document.getElementById(key).contains(document.getElementById(parentId)) === false
         ) {
           transitionId = value._id;
