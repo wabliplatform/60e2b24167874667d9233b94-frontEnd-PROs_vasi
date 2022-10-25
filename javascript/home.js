@@ -27,6 +27,25 @@ let apiMunicipalityApi = new TempApi.MunicipalityApi();import TempApi from '../s
           parentId = key;
         }
       });
+     location.href= '/mcandidates/' + transitionId;}};document.getElementById('itgcfy').onclick = (event) => {
+    event.preventDefault();
+    {  
+      let transitionId = window.location.href.split('/').at(-1);
+      let parentId = "";
+      const storedData = window.localStorage.getItem("data");
+      const newMap = new Map(JSON.parse(storedData));
+      newMap.forEach((value, key) => {
+        if (
+          document.getElementById(key) !== null &&
+          document
+            .getElementById(key)
+            .contains(document.getElementById("itgcfy")) === true &&
+            document.getElementById(key).contains(document.getElementById(parentId)) === false
+        ) {
+          transitionId = value._id;
+          parentId = key;
+        }
+      });
      location.href= '/mcandidates/' + transitionId;}};document.getElementById('iw4ibx').onclick = (event) => {
     event.preventDefault();
     {  
@@ -46,7 +65,7 @@ let apiMunicipalityApi = new TempApi.MunicipalityApi();import TempApi from '../s
           parentId = key;
         }
       });
-     location.href= '/upmunicipality/' + transitionId;}};document.getElementById('iaon6h').onclick = (event) => {
+     location.href= '/upmunicipality/' + transitionId;}};document.getElementById('ia0l6n').onclick = (event) => {
     event.preventDefault();
     {  
       let transitionId = window.location.href.split('/').at(-1);
@@ -58,14 +77,14 @@ let apiMunicipalityApi = new TempApi.MunicipalityApi();import TempApi from '../s
           document.getElementById(key) !== null &&
           document
             .getElementById(key)
-            .contains(document.getElementById("iaon6h")) === true &&
+            .contains(document.getElementById("ia0l6n")) === true &&
             document.getElementById(key).contains(document.getElementById(parentId)) === false
         ) {
           transitionId = value._id;
           parentId = key;
         }
       });
-     location.href= '/mcandidates/' + transitionId;}};document.getElementById('i15t8i').onclick = (event) => {
+     location.href= '/mcandidates/' + transitionId;}};document.getElementById('in8rai').onclick = (event) => {
     event.preventDefault();
     {  
       let transitionId = window.location.href.split('/').at(-1);
@@ -77,14 +96,14 @@ let apiMunicipalityApi = new TempApi.MunicipalityApi();import TempApi from '../s
           document.getElementById(key) !== null &&
           document
             .getElementById(key)
-            .contains(document.getElementById("i15t8i")) === true &&
+            .contains(document.getElementById("in8rai")) === true &&
             document.getElementById(key).contains(document.getElementById(parentId)) === false
         ) {
           transitionId = value._id;
           parentId = key;
         }
       });
-     location.href= '/upmunicipality/' + transitionId;}};document.getElementById('ih94gc').onclick = (event) => {
+     location.href= '/mcandidates/' + transitionId;}};document.getElementById('ia7yfe').onclick = (event) => {
     event.preventDefault();
     {  
       let transitionId = window.location.href.split('/').at(-1);
@@ -96,14 +115,14 @@ let apiMunicipalityApi = new TempApi.MunicipalityApi();import TempApi from '../s
           document.getElementById(key) !== null &&
           document
             .getElementById(key)
-            .contains(document.getElementById("ih94gc")) === true &&
+            .contains(document.getElementById("ia7yfe")) === true &&
             document.getElementById(key).contains(document.getElementById(parentId)) === false
         ) {
           transitionId = value._id;
           parentId = key;
         }
       });
-     location.href= '/mcandidates/' + transitionId;}};document.getElementById('i7mb9j').onclick = (event) => {
+     location.href= '/upmunicipality/' + transitionId;}};document.getElementById('ifvwkk').onclick = (event) => {
     event.preventDefault();
     {  
       let transitionId = window.location.href.split('/').at(-1);
@@ -115,14 +134,14 @@ let apiMunicipalityApi = new TempApi.MunicipalityApi();import TempApi from '../s
           document.getElementById(key) !== null &&
           document
             .getElementById(key)
-            .contains(document.getElementById("i7mb9j")) === true &&
+            .contains(document.getElementById("ifvwkk")) === true &&
             document.getElementById(key).contains(document.getElementById(parentId)) === false
         ) {
           transitionId = value._id;
           parentId = key;
         }
       });
-     location.href= '/upmunicipality/' + transitionId;}};document.getElementById('ilyrj').onclick = (event) => {
+     location.href= '/mcandidates/' + transitionId;}};document.getElementById('ifrieh').onclick = (event) => {
     event.preventDefault();
     {  
       let transitionId = window.location.href.split('/').at(-1);
@@ -134,14 +153,14 @@ let apiMunicipalityApi = new TempApi.MunicipalityApi();import TempApi from '../s
           document.getElementById(key) !== null &&
           document
             .getElementById(key)
-            .contains(document.getElementById("ilyrj")) === true &&
+            .contains(document.getElementById("ifrieh")) === true &&
             document.getElementById(key).contains(document.getElementById(parentId)) === false
         ) {
           transitionId = value._id;
           parentId = key;
         }
       });
-     location.href= '/mcandidates/' + transitionId;}};document.getElementById('itlf7').onclick = (event) => {
+     location.href= '/mcandidates/' + transitionId;}};document.getElementById('imatc8').onclick = (event) => {
     event.preventDefault();
     {  
       let transitionId = window.location.href.split('/').at(-1);
@@ -153,14 +172,14 @@ let apiMunicipalityApi = new TempApi.MunicipalityApi();import TempApi from '../s
           document.getElementById(key) !== null &&
           document
             .getElementById(key)
-            .contains(document.getElementById("itlf7")) === true &&
+            .contains(document.getElementById("imatc8")) === true &&
             document.getElementById(key).contains(document.getElementById(parentId)) === false
         ) {
           transitionId = value._id;
           parentId = key;
         }
       });
-     location.href= '/upmunicipality/' + transitionId;}};document.getElementById('ioh6f').onclick = (event) => {
+     location.href= '/upmunicipality/' + transitionId;}};document.getElementById('inyigh').onclick = (event) => {
     event.preventDefault();
     {  
       let transitionId = window.location.href.split('/').at(-1);
@@ -172,14 +191,14 @@ let apiMunicipalityApi = new TempApi.MunicipalityApi();import TempApi from '../s
           document.getElementById(key) !== null &&
           document
             .getElementById(key)
-            .contains(document.getElementById("ioh6f")) === true &&
+            .contains(document.getElementById("inyigh")) === true &&
             document.getElementById(key).contains(document.getElementById(parentId)) === false
         ) {
           transitionId = value._id;
           parentId = key;
         }
       });
-     location.href= '/mcandidates/' + transitionId;}};document.getElementById('ir2u3').onclick = (event) => {
+     location.href= '/mcandidates/' + transitionId;}};document.getElementById('ior24m').onclick = (event) => {
     event.preventDefault();
     {  
       let transitionId = window.location.href.split('/').at(-1);
@@ -191,14 +210,14 @@ let apiMunicipalityApi = new TempApi.MunicipalityApi();import TempApi from '../s
           document.getElementById(key) !== null &&
           document
             .getElementById(key)
-            .contains(document.getElementById("ir2u3")) === true &&
+            .contains(document.getElementById("ior24m")) === true &&
             document.getElementById(key).contains(document.getElementById(parentId)) === false
         ) {
           transitionId = value._id;
           parentId = key;
         }
       });
-     location.href= '/upmunicipality/' + transitionId;}};document.getElementById('iil2f').onclick = (event) => {
+     location.href= '/mcandidates/' + transitionId;}};document.getElementById('ii0d1p').onclick = (event) => {
     event.preventDefault();
     {  
       let transitionId = window.location.href.split('/').at(-1);
@@ -210,14 +229,14 @@ let apiMunicipalityApi = new TempApi.MunicipalityApi();import TempApi from '../s
           document.getElementById(key) !== null &&
           document
             .getElementById(key)
-            .contains(document.getElementById("iil2f")) === true &&
+            .contains(document.getElementById("ii0d1p")) === true &&
             document.getElementById(key).contains(document.getElementById(parentId)) === false
         ) {
           transitionId = value._id;
           parentId = key;
         }
       });
-     location.href= '/mcandidates/' + transitionId;}};document.getElementById('igi94').onclick = (event) => {
+     location.href= '/upmunicipality/' + transitionId;}};document.getElementById('ilemc').onclick = (event) => {
     event.preventDefault();
     {  
       let transitionId = window.location.href.split('/').at(-1);
@@ -229,14 +248,14 @@ let apiMunicipalityApi = new TempApi.MunicipalityApi();import TempApi from '../s
           document.getElementById(key) !== null &&
           document
             .getElementById(key)
-            .contains(document.getElementById("igi94")) === true &&
+            .contains(document.getElementById("ilemc")) === true &&
             document.getElementById(key).contains(document.getElementById(parentId)) === false
         ) {
           transitionId = value._id;
           parentId = key;
         }
       });
-     location.href= '/upmunicipality/' + transitionId;}};document.getElementById('i1qpd').onclick = (event) => {
+     location.href= '/mcandidates/' + transitionId;}};document.getElementById('ikyte').onclick = (event) => {
     event.preventDefault();
     {  
       let transitionId = window.location.href.split('/').at(-1);
@@ -248,14 +267,14 @@ let apiMunicipalityApi = new TempApi.MunicipalityApi();import TempApi from '../s
           document.getElementById(key) !== null &&
           document
             .getElementById(key)
-            .contains(document.getElementById("i1qpd")) === true &&
+            .contains(document.getElementById("ikyte")) === true &&
             document.getElementById(key).contains(document.getElementById(parentId)) === false
         ) {
           transitionId = value._id;
           parentId = key;
         }
       });
-     location.href= '/mcandidates/' + transitionId;}};document.getElementById('i2kmj').onclick = (event) => {
+     location.href= '/mcandidates/' + transitionId;}};document.getElementById('iva6g').onclick = (event) => {
     event.preventDefault();
     {  
       let transitionId = window.location.href.split('/').at(-1);
@@ -267,14 +286,14 @@ let apiMunicipalityApi = new TempApi.MunicipalityApi();import TempApi from '../s
           document.getElementById(key) !== null &&
           document
             .getElementById(key)
-            .contains(document.getElementById("i2kmj")) === true &&
+            .contains(document.getElementById("iva6g")) === true &&
             document.getElementById(key).contains(document.getElementById(parentId)) === false
         ) {
           transitionId = value._id;
           parentId = key;
         }
       });
-     location.href= '/upmunicipality/' + transitionId;}};document.getElementById('ileo6').onclick = (event) => {
+     location.href= '/upmunicipality/' + transitionId;}};document.getElementById('i38ly').onclick = (event) => {
     event.preventDefault();
     {  
       let transitionId = window.location.href.split('/').at(-1);
@@ -286,14 +305,14 @@ let apiMunicipalityApi = new TempApi.MunicipalityApi();import TempApi from '../s
           document.getElementById(key) !== null &&
           document
             .getElementById(key)
-            .contains(document.getElementById("ileo6")) === true &&
+            .contains(document.getElementById("i38ly")) === true &&
             document.getElementById(key).contains(document.getElementById(parentId)) === false
         ) {
           transitionId = value._id;
           parentId = key;
         }
       });
-     location.href= '/mcandidates/' + transitionId;}};document.getElementById('ikbem').onclick = (event) => {
+     location.href= '/mcandidates/' + transitionId;}};document.getElementById('i3n2y').onclick = (event) => {
     event.preventDefault();
     {  
       let transitionId = window.location.href.split('/').at(-1);
@@ -305,7 +324,140 @@ let apiMunicipalityApi = new TempApi.MunicipalityApi();import TempApi from '../s
           document.getElementById(key) !== null &&
           document
             .getElementById(key)
-            .contains(document.getElementById("ikbem")) === true &&
+            .contains(document.getElementById("i3n2y")) === true &&
+            document.getElementById(key).contains(document.getElementById(parentId)) === false
+        ) {
+          transitionId = value._id;
+          parentId = key;
+        }
+      });
+     location.href= '/mcandidates/' + transitionId;}};document.getElementById('iddgi').onclick = (event) => {
+    event.preventDefault();
+    {  
+      let transitionId = window.location.href.split('/').at(-1);
+      let parentId = "";
+      const storedData = window.localStorage.getItem("data");
+      const newMap = new Map(JSON.parse(storedData));
+      newMap.forEach((value, key) => {
+        if (
+          document.getElementById(key) !== null &&
+          document
+            .getElementById(key)
+            .contains(document.getElementById("iddgi")) === true &&
+            document.getElementById(key).contains(document.getElementById(parentId)) === false
+        ) {
+          transitionId = value._id;
+          parentId = key;
+        }
+      });
+     location.href= '/upmunicipality/' + transitionId;}};document.getElementById('i77s3').onclick = (event) => {
+    event.preventDefault();
+    {  
+      let transitionId = window.location.href.split('/').at(-1);
+      let parentId = "";
+      const storedData = window.localStorage.getItem("data");
+      const newMap = new Map(JSON.parse(storedData));
+      newMap.forEach((value, key) => {
+        if (
+          document.getElementById(key) !== null &&
+          document
+            .getElementById(key)
+            .contains(document.getElementById("i77s3")) === true &&
+            document.getElementById(key).contains(document.getElementById(parentId)) === false
+        ) {
+          transitionId = value._id;
+          parentId = key;
+        }
+      });
+     location.href= '/mcandidates/' + transitionId;}};document.getElementById('i539m').onclick = (event) => {
+    event.preventDefault();
+    {  
+      let transitionId = window.location.href.split('/').at(-1);
+      let parentId = "";
+      const storedData = window.localStorage.getItem("data");
+      const newMap = new Map(JSON.parse(storedData));
+      newMap.forEach((value, key) => {
+        if (
+          document.getElementById(key) !== null &&
+          document
+            .getElementById(key)
+            .contains(document.getElementById("i539m")) === true &&
+            document.getElementById(key).contains(document.getElementById(parentId)) === false
+        ) {
+          transitionId = value._id;
+          parentId = key;
+        }
+      });
+     location.href= '/mcandidates/' + transitionId;}};document.getElementById('i7jqa').onclick = (event) => {
+    event.preventDefault();
+    {  
+      let transitionId = window.location.href.split('/').at(-1);
+      let parentId = "";
+      const storedData = window.localStorage.getItem("data");
+      const newMap = new Map(JSON.parse(storedData));
+      newMap.forEach((value, key) => {
+        if (
+          document.getElementById(key) !== null &&
+          document
+            .getElementById(key)
+            .contains(document.getElementById("i7jqa")) === true &&
+            document.getElementById(key).contains(document.getElementById(parentId)) === false
+        ) {
+          transitionId = value._id;
+          parentId = key;
+        }
+      });
+     location.href= '/upmunicipality/' + transitionId;}};document.getElementById('id78k').onclick = (event) => {
+    event.preventDefault();
+    {  
+      let transitionId = window.location.href.split('/').at(-1);
+      let parentId = "";
+      const storedData = window.localStorage.getItem("data");
+      const newMap = new Map(JSON.parse(storedData));
+      newMap.forEach((value, key) => {
+        if (
+          document.getElementById(key) !== null &&
+          document
+            .getElementById(key)
+            .contains(document.getElementById("id78k")) === true &&
+            document.getElementById(key).contains(document.getElementById(parentId)) === false
+        ) {
+          transitionId = value._id;
+          parentId = key;
+        }
+      });
+     location.href= '/mcandidates/' + transitionId;}};document.getElementById('i68o6').onclick = (event) => {
+    event.preventDefault();
+    {  
+      let transitionId = window.location.href.split('/').at(-1);
+      let parentId = "";
+      const storedData = window.localStorage.getItem("data");
+      const newMap = new Map(JSON.parse(storedData));
+      newMap.forEach((value, key) => {
+        if (
+          document.getElementById(key) !== null &&
+          document
+            .getElementById(key)
+            .contains(document.getElementById("i68o6")) === true &&
+            document.getElementById(key).contains(document.getElementById(parentId)) === false
+        ) {
+          transitionId = value._id;
+          parentId = key;
+        }
+      });
+     location.href= '/mcandidates/' + transitionId;}};document.getElementById('ii10k').onclick = (event) => {
+    event.preventDefault();
+    {  
+      let transitionId = window.location.href.split('/').at(-1);
+      let parentId = "";
+      const storedData = window.localStorage.getItem("data");
+      const newMap = new Map(JSON.parse(storedData));
+      newMap.forEach((value, key) => {
+        if (
+          document.getElementById(key) !== null &&
+          document
+            .getElementById(key)
+            .contains(document.getElementById("ii10k")) === true &&
             document.getElementById(key).contains(document.getElementById(parentId)) === false
         ) {
           transitionId = value._id;
