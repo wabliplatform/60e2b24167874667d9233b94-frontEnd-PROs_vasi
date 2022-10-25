@@ -23,13 +23,13 @@ class Candidate {
     /**
      * Constructs a new <code>Candidate</code>.
      * @alias module:model/Candidate
-     * @param cimage {module:model/MunicipalityMimage} 
      * @param cname {String} 
      * @param cbio {String} 
+     * @param cimage {module:model/MunicipalityMimage} 
      */
-    constructor(cimage, cname, cbio) { 
+    constructor(cname, cbio, cimage) { 
         
-        Candidate.initialize(this, cimage, cname, cbio);
+        Candidate.initialize(this, cname, cbio, cimage);
     }
 
     /**
@@ -37,10 +37,10 @@ class Candidate {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, cimage, cname, cbio) { 
-        obj['cimage'] = cimage;
+    static initialize(obj, cname, cbio, cimage) { 
         obj['cname'] = cname;
         obj['cbio'] = cbio;
+        obj['cimage'] = cimage;
     }
 
     /**
@@ -57,14 +57,14 @@ class Candidate {
             if (data.hasOwnProperty('_id')) {
                 obj['_id'] = ApiClient.convertToType(data['_id'], 'String');
             }
-            if (data.hasOwnProperty('cimage')) {
-                obj['cimage'] = MunicipalityMimage.constructFromObject(data['cimage']);
-            }
             if (data.hasOwnProperty('cname')) {
                 obj['cname'] = ApiClient.convertToType(data['cname'], 'String');
             }
             if (data.hasOwnProperty('cbio')) {
                 obj['cbio'] = ApiClient.convertToType(data['cbio'], 'String');
+            }
+            if (data.hasOwnProperty('cimage')) {
+                obj['cimage'] = MunicipalityMimage.constructFromObject(data['cimage']);
             }
         }
         return obj;
@@ -79,11 +79,6 @@ class Candidate {
 Candidate.prototype['_id'] = undefined;
 
 /**
- * @member {module:model/MunicipalityMimage} cimage
- */
-Candidate.prototype['cimage'] = undefined;
-
-/**
  * @member {String} cname
  */
 Candidate.prototype['cname'] = undefined;
@@ -92,6 +87,11 @@ Candidate.prototype['cname'] = undefined;
  * @member {String} cbio
  */
 Candidate.prototype['cbio'] = undefined;
+
+/**
+ * @member {module:model/MunicipalityMimage} cimage
+ */
+Candidate.prototype['cimage'] = undefined;
 
 
 

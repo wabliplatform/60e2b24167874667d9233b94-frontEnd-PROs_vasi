@@ -60,12 +60,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property cimage (base name: "cimage")', function() {
-      // uncomment below and update the code to test the property cimage
-      //var instance = new TempApi.Candidate();
-      //expect(instance).to.be();
-    });
-
     it('should have the property cname (base name: "cname")', function() {
       // uncomment below and update the code to test the property cname
       //var instance = new TempApi.Candidate();
@@ -74,6 +68,12 @@
 
     it('should have the property cbio (base name: "cbio")', function() {
       // uncomment below and update the code to test the property cbio
+      //var instance = new TempApi.Candidate();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property cimage (base name: "cimage")', function() {
+      // uncomment below and update the code to test the property cimage
       //var instance = new TempApi.Candidate();
       //expect(instance).to.be();
     });

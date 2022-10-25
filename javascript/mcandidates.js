@@ -27,44 +27,6 @@ let apiMunicipalityApi = new TempApi.MunicipalityApi();import TempApi from '../s
           parentId = key;
         }
       });
-     location.href= '/candidate/' + transitionId;}};document.getElementById('i0xy1').onclick = (event) => {
-    event.preventDefault();
-    {  
-      let transitionId = window.location.href.split('/').at(-1);
-      let parentId = "";
-      const storedData = window.localStorage.getItem("data");
-      const newMap = new Map(JSON.parse(storedData));
-      newMap.forEach((value, key) => {
-        if (
-          document.getElementById(key) !== null &&
-          document
-            .getElementById(key)
-            .contains(document.getElementById("i0xy1")) === true &&
-            document.getElementById(key).contains(document.getElementById(parentId)) === false
-        ) {
-          transitionId = value._id;
-          parentId = key;
-        }
-      });
-     location.href= '/candidate/' + transitionId;}};document.getElementById('if8lb').onclick = (event) => {
-    event.preventDefault();
-    {  
-      let transitionId = window.location.href.split('/').at(-1);
-      let parentId = "";
-      const storedData = window.localStorage.getItem("data");
-      const newMap = new Map(JSON.parse(storedData));
-      newMap.forEach((value, key) => {
-        if (
-          document.getElementById(key) !== null &&
-          document
-            .getElementById(key)
-            .contains(document.getElementById("if8lb")) === true &&
-            document.getElementById(key).contains(document.getElementById(parentId)) === false
-        ) {
-          transitionId = value._id;
-          parentId = key;
-        }
-      });
      location.href= '/candidate/' + transitionId;}};document.getElementById('i0n37').onclick = (event) => {
     event.preventDefault();
     {  
@@ -84,7 +46,7 @@ let apiMunicipalityApi = new TempApi.MunicipalityApi();import TempApi from '../s
           parentId = key;
         }
       });
-     location.href= '/candidate/' + transitionId;}};document.getElementById('isw7k').onclick = (event) => {
+     location.href= '/candidate/' + transitionId;}};document.getElementById('irsdh').onclick = (event) => {
     event.preventDefault();
     {  
       let transitionId = window.location.href.split('/').at(-1);
@@ -96,14 +58,14 @@ let apiMunicipalityApi = new TempApi.MunicipalityApi();import TempApi from '../s
           document.getElementById(key) !== null &&
           document
             .getElementById(key)
-            .contains(document.getElementById("isw7k")) === true &&
+            .contains(document.getElementById("irsdh")) === true &&
             document.getElementById(key).contains(document.getElementById(parentId)) === false
         ) {
           transitionId = value._id;
           parentId = key;
         }
       });
-     location.href= '/candidate/' + transitionId;}};document.getElementById('i2czm').onclick = (event) => {
+     location.href= '/candidate/' + transitionId;}};document.getElementById('id66r').onclick = (event) => {
     event.preventDefault();
     {  
       let transitionId = window.location.href.split('/').at(-1);
@@ -115,14 +77,14 @@ let apiMunicipalityApi = new TempApi.MunicipalityApi();import TempApi from '../s
           document.getElementById(key) !== null &&
           document
             .getElementById(key)
-            .contains(document.getElementById("i2czm")) === true &&
+            .contains(document.getElementById("id66r")) === true &&
             document.getElementById(key).contains(document.getElementById(parentId)) === false
         ) {
           transitionId = value._id;
           parentId = key;
         }
       });
-     location.href= '/candidate/' + transitionId;}};document.getElementById('ikrnp').onclick = (event) => {
+     location.href= '/candidate/' + transitionId;}};document.getElementById('i2686').onclick = (event) => {
     event.preventDefault();
     {  
       let transitionId = window.location.href.split('/').at(-1);
@@ -134,14 +96,14 @@ let apiMunicipalityApi = new TempApi.MunicipalityApi();import TempApi from '../s
           document.getElementById(key) !== null &&
           document
             .getElementById(key)
-            .contains(document.getElementById("ikrnp")) === true &&
+            .contains(document.getElementById("i2686")) === true &&
             document.getElementById(key).contains(document.getElementById(parentId)) === false
         ) {
           transitionId = value._id;
           parentId = key;
         }
       });
-     location.href= '/candidate/' + transitionId;}};document.getElementById('i0q1s').onclick = (event) => {
+     location.href= '/candidate/' + transitionId;}};document.getElementById('i3l6w').onclick = (event) => {
     event.preventDefault();
     {  
       let transitionId = window.location.href.split('/').at(-1);
@@ -153,14 +115,14 @@ let apiMunicipalityApi = new TempApi.MunicipalityApi();import TempApi from '../s
           document.getElementById(key) !== null &&
           document
             .getElementById(key)
-            .contains(document.getElementById("i0q1s")) === true &&
+            .contains(document.getElementById("i3l6w")) === true &&
             document.getElementById(key).contains(document.getElementById(parentId)) === false
         ) {
           transitionId = value._id;
           parentId = key;
         }
       });
-     location.href= '/candidate/' + transitionId;}};document.getElementById('i9i7i').onclick = (event) => {
+     location.href= '/candidate/' + transitionId;}};document.getElementById('igmwo').onclick = (event) => {
     event.preventDefault();
     {  
       let transitionId = window.location.href.split('/').at(-1);
@@ -172,14 +134,14 @@ let apiMunicipalityApi = new TempApi.MunicipalityApi();import TempApi from '../s
           document.getElementById(key) !== null &&
           document
             .getElementById(key)
-            .contains(document.getElementById("i9i7i")) === true &&
+            .contains(document.getElementById("igmwo")) === true &&
             document.getElementById(key).contains(document.getElementById(parentId)) === false
         ) {
           transitionId = value._id;
           parentId = key;
         }
       });
-     location.href= '/candidate/' + transitionId;}};document.getElementById('i5fwc').onclick = (event) => {
+     location.href= '/candidate/' + transitionId;}};document.getElementById('irauc').onclick = (event) => {
     event.preventDefault();
     {  
       let transitionId = window.location.href.split('/').at(-1);
@@ -191,121 +153,7 @@ let apiMunicipalityApi = new TempApi.MunicipalityApi();import TempApi from '../s
           document.getElementById(key) !== null &&
           document
             .getElementById(key)
-            .contains(document.getElementById("i5fwc")) === true &&
-            document.getElementById(key).contains(document.getElementById(parentId)) === false
-        ) {
-          transitionId = value._id;
-          parentId = key;
-        }
-      });
-     location.href= '/candidate/' + transitionId;}};document.getElementById('ijk4g').onclick = (event) => {
-    event.preventDefault();
-    {  
-      let transitionId = window.location.href.split('/').at(-1);
-      let parentId = "";
-      const storedData = window.localStorage.getItem("data");
-      const newMap = new Map(JSON.parse(storedData));
-      newMap.forEach((value, key) => {
-        if (
-          document.getElementById(key) !== null &&
-          document
-            .getElementById(key)
-            .contains(document.getElementById("ijk4g")) === true &&
-            document.getElementById(key).contains(document.getElementById(parentId)) === false
-        ) {
-          transitionId = value._id;
-          parentId = key;
-        }
-      });
-     location.href= '/candidate/' + transitionId;}};document.getElementById('ifakn').onclick = (event) => {
-    event.preventDefault();
-    {  
-      let transitionId = window.location.href.split('/').at(-1);
-      let parentId = "";
-      const storedData = window.localStorage.getItem("data");
-      const newMap = new Map(JSON.parse(storedData));
-      newMap.forEach((value, key) => {
-        if (
-          document.getElementById(key) !== null &&
-          document
-            .getElementById(key)
-            .contains(document.getElementById("ifakn")) === true &&
-            document.getElementById(key).contains(document.getElementById(parentId)) === false
-        ) {
-          transitionId = value._id;
-          parentId = key;
-        }
-      });
-     location.href= '/candidate/' + transitionId;}};document.getElementById('i60hw').onclick = (event) => {
-    event.preventDefault();
-    {  
-      let transitionId = window.location.href.split('/').at(-1);
-      let parentId = "";
-      const storedData = window.localStorage.getItem("data");
-      const newMap = new Map(JSON.parse(storedData));
-      newMap.forEach((value, key) => {
-        if (
-          document.getElementById(key) !== null &&
-          document
-            .getElementById(key)
-            .contains(document.getElementById("i60hw")) === true &&
-            document.getElementById(key).contains(document.getElementById(parentId)) === false
-        ) {
-          transitionId = value._id;
-          parentId = key;
-        }
-      });
-     location.href= '/candidate/' + transitionId;}};document.getElementById('iloai').onclick = (event) => {
-    event.preventDefault();
-    {  
-      let transitionId = window.location.href.split('/').at(-1);
-      let parentId = "";
-      const storedData = window.localStorage.getItem("data");
-      const newMap = new Map(JSON.parse(storedData));
-      newMap.forEach((value, key) => {
-        if (
-          document.getElementById(key) !== null &&
-          document
-            .getElementById(key)
-            .contains(document.getElementById("iloai")) === true &&
-            document.getElementById(key).contains(document.getElementById(parentId)) === false
-        ) {
-          transitionId = value._id;
-          parentId = key;
-        }
-      });
-     location.href= '/candidate/' + transitionId;}};document.getElementById('ip1md').onclick = (event) => {
-    event.preventDefault();
-    {  
-      let transitionId = window.location.href.split('/').at(-1);
-      let parentId = "";
-      const storedData = window.localStorage.getItem("data");
-      const newMap = new Map(JSON.parse(storedData));
-      newMap.forEach((value, key) => {
-        if (
-          document.getElementById(key) !== null &&
-          document
-            .getElementById(key)
-            .contains(document.getElementById("ip1md")) === true &&
-            document.getElementById(key).contains(document.getElementById(parentId)) === false
-        ) {
-          transitionId = value._id;
-          parentId = key;
-        }
-      });
-     location.href= '/candidate/' + transitionId;}};document.getElementById('i68di').onclick = (event) => {
-    event.preventDefault();
-    {  
-      let transitionId = window.location.href.split('/').at(-1);
-      let parentId = "";
-      const storedData = window.localStorage.getItem("data");
-      const newMap = new Map(JSON.parse(storedData));
-      newMap.forEach((value, key) => {
-        if (
-          document.getElementById(key) !== null &&
-          document
-            .getElementById(key)
-            .contains(document.getElementById("i68di")) === true &&
+            .contains(document.getElementById("irauc")) === true &&
             document.getElementById(key).contains(document.getElementById(parentId)) === false
         ) {
           transitionId = value._id;
@@ -326,9 +174,9 @@ let apiMunicipalityApi = new TempApi.MunicipalityApi();import TempApi from '../s
        try {
       const attributeSubdocumentElement = tableDataElement[
         index
-      ].querySelector("[annotationname = 'cimage']");
+      ].querySelector("[annotationname = 'cname']");
       if (attributeSubdocumentElement !== null) {
-        attributeSubdocumentElement.src = tableData[tableData.length - index -1].cimage;
+        attributeSubdocumentElement.textContent = tableData[tableData.length - index -1].cname;
       }
     }
     catch(e) {console.log(e);}; try {
