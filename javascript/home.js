@@ -480,7 +480,17 @@ else if(subDataElements[i].getAttribute('annotationname') === 'mimage' && data[d
   subDataElements[i].src = data[data.length -i -1].mimage.data;
   subDataElements[i].name = data[data.length -i -1].mimage.name;
 }
- } catch (e) { console.log(e) };
+ } catch (e) { console.log(e) };try { 
+      const insideSubDataElement = subDataElements[i].querySelector("[annotationname = 'mname']");
+      if(insideSubDataElement !== null){
+        insideSubDataElement.textContent = data[data.length -i -1].mname;
+        
+      }
+      else if(subDataElements[i].getAttribute('annotationname') === 'mname'){
+        subDataElements[i].textContent = data[data.length -i -1].mname;
+        
+      }
+     } catch (e) { console.log(e) };
         map.set(subDataElements[i].getAttribute('id'), data[data.length-i-1])
         
       }
