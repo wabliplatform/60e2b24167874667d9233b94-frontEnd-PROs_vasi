@@ -27,6 +27,44 @@ let apiMunicipalityApi = new TempApi.MunicipalityApi();import TempApi from '../s
           parentId = key;
         }
       });
+     location.href= '/candidate/' + transitionId;}};document.getElementById('i0xy1').onclick = (event) => {
+    event.preventDefault();
+    {  
+      let transitionId = window.location.href.split('/').at(-1);
+      let parentId = "";
+      const storedData = window.localStorage.getItem("data");
+      const newMap = new Map(JSON.parse(storedData));
+      newMap.forEach((value, key) => {
+        if (
+          document.getElementById(key) !== null &&
+          document
+            .getElementById(key)
+            .contains(document.getElementById("i0xy1")) === true &&
+            document.getElementById(key).contains(document.getElementById(parentId)) === false
+        ) {
+          transitionId = value._id;
+          parentId = key;
+        }
+      });
+     location.href= '/candidate/' + transitionId;}};document.getElementById('if8lb').onclick = (event) => {
+    event.preventDefault();
+    {  
+      let transitionId = window.location.href.split('/').at(-1);
+      let parentId = "";
+      const storedData = window.localStorage.getItem("data");
+      const newMap = new Map(JSON.parse(storedData));
+      newMap.forEach((value, key) => {
+        if (
+          document.getElementById(key) !== null &&
+          document
+            .getElementById(key)
+            .contains(document.getElementById("if8lb")) === true &&
+            document.getElementById(key).contains(document.getElementById(parentId)) === false
+        ) {
+          transitionId = value._id;
+          parentId = key;
+        }
+      });
      location.href= '/candidate/' + transitionId;}};document.getElementById('i0n37').onclick = (event) => {
     event.preventDefault();
     {  
@@ -68,9 +106,9 @@ let apiMunicipalityApi = new TempApi.MunicipalityApi();import TempApi from '../s
     catch(e) {console.log(e);}; try {
       const attributeSubdocumentElement = tableDataElement[
         index
-      ].querySelector("[annotationname = 'cname']");
+      ].querySelector("[annotationname = 'cimage']");
       if (attributeSubdocumentElement !== null) {
-        attributeSubdocumentElement.textContent = tableData[tableData.length - index -1].cname;
+        attributeSubdocumentElement.textContent = tableData[tableData.length - index -1].cimage;
       }
     }
     catch(e) {console.log(e);};
