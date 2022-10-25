@@ -160,39 +160,20 @@ let apiCandidateApi = new TempApi.CandidateApi();import TempApi from '../src/ind
           parentId = key;
         }
       });
-     location.href= '/candidate/' + transitionId;}};window.onload = () => {let candidateId = window.location.pathname.replace('/mcandidates/','');apiCandidateApi.getcandidate( candidateId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); try { document.querySelector('[annotationname = cname]').textContent = response.body.query.cname; } catch (e) { console.log(e) };}});apiCandidateApi.getAllcandidate((error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); const subDataElements =[...document.getElementById("iof5e").querySelectorAll( "[dataitem='true']" )].filter(
-    (element, index, array) =>
-    !array.reduce((hasAncestorFlag, dataItem) => hasAncestorFlag || (element.compareDocumentPosition(dataItem) & Node.DOCUMENT_POSITION_CONTAINS) === 8, false)
-  );const map = new Map();  data.forEach((item,i) => {
-    if(subDataElements.length > i)
-      {
-        try { 
-const insideSubDataElement = subDataElements[i].querySelector("[annotationname = 'cimage']");
-if(insideSubDataElement !== null && data[data.length -i -1].cimage !== undefined){
-  insideSubDataElement.src = data[data.length -i -1].cimage.data;
-  insideSubDataElement.name = data[data.length -i -1].cimage.name;
-}
-else if(subDataElements[i].getAttribute('annotationname') === 'cimage' && data[data.length -i -1].cimage !== undefined){
-  subDataElements[i].src = data[data.length -i -1].cimage.data;
-  subDataElements[i].name = data[data.length -i -1].cimage.name;
-}
- } catch (e) { console.log(e) };try { 
-      const insideSubDataElement = subDataElements[i].querySelector("[annotationname = 'cname']");
-      if(insideSubDataElement !== null){
-        insideSubDataElement.textContent = data[data.length -i -1].cname;
-        
-      }
-      else if(subDataElements[i].getAttribute('annotationname') === 'cname'){
-        subDataElements[i].textContent = data[data.length -i -1].cname;
-        
-      }
-     } catch (e) { console.log(e) };
-        map.set(subDataElements[i].getAttribute('id'), data[data.length-i-1])
-        
-      }
-      
-    });
+     location.href= '/candidate/' + transitionId;}};window.onload = () => {let candidateId = window.location.pathname.replace('/mcandidates/','');apiCandidateApi.getcandidate( candidateId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); try { document.querySelector('[annotationname = cname]').textContent = response.body.query.cname; } catch (e) { console.log(e) };}});let candidateId = window.location.pathname.replace('/mcandidates/','');apiCandidateApi.getcandidate( candidateId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); try { 
+      if(response.body.query.cimage !== undefined){
+        if(document.querySelector('[annotationname = cimage]').getAttribute('type') === 'file'){
+          document.querySelector('[annotationname = cimage]').setAttribute('data-image-base64',response.body.query.cimage.data);
+          let fileName = response.body.query.cimage.name;
+          let file = new File([response.body.query.cimage.data], fileName,{lastModified:new Date().getTime()}, 'utf-8');
+          let container = new DataTransfer();
+          container.items.add(file);
 
-    window.localStorage.setItem('data', JSON.stringify(Array.from(map.entries())));
-    
-    [...subDataElements].forEach((element,index) => {if(index >= data.length) subDataElements[index].style.display = 'none';})}});};
+          document.querySelector("[annotationname = cimage]").files = container.files;
+        }
+        else {
+          document.querySelector('[annotationname = cimage]').src = response.body.query.cimage.data ;
+        }
+        document.querySelector('[annotationname = cimage]').name = response.body.query.cimage.name ;
+      }
+       } catch (e) { console.log(e) };try { document.querySelector('[annotationname = cname]').textContent = response.body.query.cname; } catch (e) { console.log(e) };}});};
