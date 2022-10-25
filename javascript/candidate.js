@@ -8,7 +8,26 @@ let apiCandidateApi = new TempApi.CandidateApi();import TempApi from '../src/ind
     event.preventDefault();
     {   location.href= '/cmunicipality' ;}};document.getElementById('iwssa').onclick = (event) => {
     event.preventDefault();
-    {   location.href= '/ccandidate' ;}};window.onload = () => {let candidateId = window.location.pathname.replace('/candidate/','');apiCandidateApi.getcandidate( candidateId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); try { 
+    {   location.href= '/ccandidate' ;}};document.getElementById('ie0zy').onclick = (event) => {
+    event.preventDefault();
+    let candidateId = window.location.pathname.replace('/candidate/','');
+      if(candidateId === '/candidate' || candidateId === ''){
+        let parentId = "";
+        const storedData = window.localStorage.getItem('data');
+        const newMap = new Map(JSON.parse(storedData));
+        newMap.forEach((value, key) => {
+          if (
+            document
+              .getElementById(key)
+              .contains(document.getElementById("ie0zy")) === true &&
+              document.getElementById(key).contains(document.getElementById(parentId)) === false
+          ) {
+            candidateId = value._id;
+            parentId = key;
+          }
+        });
+      }
+    apiCandidateApi.deletecandidate( candidateId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully.');{   location.href= '/allcandidates' ;}}});};window.onload = () => {let candidateId = window.location.pathname.replace('/candidate/','');apiCandidateApi.getcandidate( candidateId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); try { 
       if(response.body.query.cimage !== undefined){
         if(document.querySelector('[annotationname = cimage]').getAttribute('type') === 'file'){
           document.querySelector('[annotationname = cimage]').setAttribute('data-image-base64',response.body.query.cimage.data);
