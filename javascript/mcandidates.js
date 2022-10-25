@@ -27,6 +27,82 @@ let apiMunicipalityApi = new TempApi.MunicipalityApi();import TempApi from '../s
           parentId = key;
         }
       });
+     location.href= '/candidate/' + transitionId;}};document.getElementById('itty1').onclick = (event) => {
+    event.preventDefault();
+    {  
+      let transitionId = window.location.href.split('/').at(-1);
+      let parentId = "";
+      const storedData = window.localStorage.getItem("data");
+      const newMap = new Map(JSON.parse(storedData));
+      newMap.forEach((value, key) => {
+        if (
+          document.getElementById(key) !== null &&
+          document
+            .getElementById(key)
+            .contains(document.getElementById("itty1")) === true &&
+            document.getElementById(key).contains(document.getElementById(parentId)) === false
+        ) {
+          transitionId = value._id;
+          parentId = key;
+        }
+      });
+     location.href= '/candidate/' + transitionId;}};document.getElementById('iy5p7').onclick = (event) => {
+    event.preventDefault();
+    {  
+      let transitionId = window.location.href.split('/').at(-1);
+      let parentId = "";
+      const storedData = window.localStorage.getItem("data");
+      const newMap = new Map(JSON.parse(storedData));
+      newMap.forEach((value, key) => {
+        if (
+          document.getElementById(key) !== null &&
+          document
+            .getElementById(key)
+            .contains(document.getElementById("iy5p7")) === true &&
+            document.getElementById(key).contains(document.getElementById(parentId)) === false
+        ) {
+          transitionId = value._id;
+          parentId = key;
+        }
+      });
+     location.href= '/candidate/' + transitionId;}};document.getElementById('iyf0f').onclick = (event) => {
+    event.preventDefault();
+    {  
+      let transitionId = window.location.href.split('/').at(-1);
+      let parentId = "";
+      const storedData = window.localStorage.getItem("data");
+      const newMap = new Map(JSON.parse(storedData));
+      newMap.forEach((value, key) => {
+        if (
+          document.getElementById(key) !== null &&
+          document
+            .getElementById(key)
+            .contains(document.getElementById("iyf0f")) === true &&
+            document.getElementById(key).contains(document.getElementById(parentId)) === false
+        ) {
+          transitionId = value._id;
+          parentId = key;
+        }
+      });
+     location.href= '/candidate/' + transitionId;}};document.getElementById('irvho').onclick = (event) => {
+    event.preventDefault();
+    {  
+      let transitionId = window.location.href.split('/').at(-1);
+      let parentId = "";
+      const storedData = window.localStorage.getItem("data");
+      const newMap = new Map(JSON.parse(storedData));
+      newMap.forEach((value, key) => {
+        if (
+          document.getElementById(key) !== null &&
+          document
+            .getElementById(key)
+            .contains(document.getElementById("irvho")) === true &&
+            document.getElementById(key).contains(document.getElementById(parentId)) === false
+        ) {
+          transitionId = value._id;
+          parentId = key;
+        }
+      });
      location.href= '/candidate/' + transitionId;}};document.getElementById('iyf0d').onclick = (event) => {
     event.preventDefault();
     {  
@@ -84,7 +160,7 @@ let apiMunicipalityApi = new TempApi.MunicipalityApi();import TempApi from '../s
           parentId = key;
         }
       });
-     location.href= '/candidate/' + transitionId;}};window.onload = () => {let municipalityId = window.location.pathname.replace('/mcandidates/','');apiMunicipalityApi.getmunicipality( municipalityId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); const map = new Map();try { 
+     location.href= '/candidate/' + transitionId;}};window.onload = () => {let municipalityId = window.location.pathname.replace('/mcandidates/','');apiMunicipalityApi.getmunicipality( municipalityId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); const map = new Map();try { document.querySelector('[annotationname = mname]').textContent = response.body.query.mname; } catch (e) { console.log(e) };try { 
         document.querySelector('[annotationname = mcandidates]').setAttribute('selected-element',response.body.query.mcandidates.undefined);
         const insideSubdocument = document.querySelector("[annotationname = 'mcandidates']");
         if (insideSubdocument !==null) {
