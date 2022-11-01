@@ -9,6 +9,7 @@ module.exports = {
 	'cmunicipality' : './javascript/cmunicipality.js',
 	'upmunicipality' : './javascript/upmunicipality.js',
 	'ccandidate' : './javascript/ccandidate.js',
+	'Page8' : './javascript/Page8.js',
 },
   output: {
     path: path.resolve(__dirname, 'dist'),
