@@ -117,7 +117,7 @@ document.addEventListener('alignmcandidates', function(e) {
     let municipalityId = window.location.pathname.replace('/upmunicipality/','');let municipality = new TempApi.Municipality();municipality['mimage'] = {
         data: document.querySelector("[annotationname = 'mimage']").getAttribute("data-image-base64") !== null ? document.querySelector("[annotationname = 'mimage']").getAttribute("data-image-base64") : document.querySelector("[annotationname = 'mimage']").src,
         name: document.querySelector("[annotationname = 'mimage']").getAttribute("name")
-      };municipality['mname'] = document.querySelector("[annotationname = 'mname']").value;municipality['mcandidates'] = document.querySelector("[annotationname = 'mcandidates']").textContent; let opts = {municipality};apiMunicipalityApi.updatemunicipality( municipalityId, opts, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); 
+      };municipality['mname'] = document.querySelector("[annotationname = 'mname']").value;municipality['mcandidates'] = arrayiz4py.map(item => item.value); let opts = {municipality};apiMunicipalityApi.updatemunicipality( municipalityId, opts, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); 
       if(response.body.query.mimage !== undefined){
 
         if(document.querySelector('[annotationname = mimage]').getAttribute('type') === 'file'){
@@ -128,7 +128,7 @@ document.addEventListener('alignmcandidates', function(e) {
         }
         document.querySelector('[annotationname = mimage]').name = response.body.query.mimage.name;
       }
-      document.querySelector('[annotationname = mname]').value = response.body.query.mname ;document.querySelector('[annotationname = mcandidates]').textContent = response.body.query.mcandidates ;{   location.href= '/home' ;}}});};window.onload = () => {let municipalityId = window.location.pathname.replace('/upmunicipality/','');apiMunicipalityApi.getmunicipality( municipalityId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); const map = new Map();try { document.querySelector('[annotationname = mname]').value = response.body.query.mname; } catch (e) { console.log(e) };try { 
+      document.querySelector('[annotationname = mname]').value = response.body.query.mname ;initializearrayiz4py(response.body.query.mcandidates|| []) ; {   location.href= '/home' ;}}});};window.onload = () => {let municipalityId = window.location.pathname.replace('/upmunicipality/','');apiMunicipalityApi.getmunicipality( municipalityId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); const map = new Map();try { document.querySelector('[annotationname = mname]').value = response.body.query.mname; } catch (e) { console.log(e) };try { 
       if(response.body.query.mimage !== undefined){
         if(document.querySelector('[annotationname = mimage]').getAttribute('type') === 'file'){
           document.querySelector('[annotationname = mimage]').setAttribute('data-image-base64',response.body.query.mimage.data);
@@ -149,7 +149,8 @@ document.addEventListener('alignmcandidates', function(e) {
         const insideSubdocument = document.querySelector("[annotationname = 'mcandidates']");
         if (insideSubdocument !==null) {
           const tableData = response.body.query.mcandidates;
-    
+    initializearrayiz4py(tableData); 
+ refreshULiqxgd();
     const tableDataElement = insideSubdocument.querySelectorAll("[dataitem='true']");
     tableData.forEach((data,index) => {
       if(tableDataElement.length < index) {
@@ -191,7 +192,7 @@ document.addEventListener('alignmcandidates', function(e) {
           response.body.query.mcandidates
         );
       }
-     } catch (e) { console.log(e) };window.localStorage.setItem('data', JSON.stringify(Array.from(map.entries())));}});apiCandidateApi.getAllcandidate((error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); const subDataElements =[...document.getElementById("i0op7").querySelectorAll( "[dataitem='true']" )].filter(
+     } catch (e) { console.log(e) };window.localStorage.setItem('data', JSON.stringify(Array.from(map.entries())));}});apiCandidateApi.getAllcandidate((error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); const subDataElements =[...document.getElementById("ipwtw").querySelectorAll( "[dataitem='true']" )].filter(
     (element, index, array) =>
     !array.reduce((hasAncestorFlag, dataItem) => hasAncestorFlag || (element.compareDocumentPosition(dataItem) & Node.DOCUMENT_POSITION_CONTAINS) === 8, false)
   );const map = new Map();
