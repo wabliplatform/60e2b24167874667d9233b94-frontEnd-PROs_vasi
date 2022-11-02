@@ -10,6 +10,7 @@ module.exports = {
 	'upmunicipality' : './javascript/upmunicipality.js',
 	'ccandidate' : './javascript/ccandidate.js',
 	'cconsultant' : './javascript/cconsultant.js',
+	'consultant' : './javascript/consultant.js',
 },
   output: {
     path: path.resolve(__dirname, 'dist'),
