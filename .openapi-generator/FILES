@@ -6,6 +6,9 @@ config.js
 docs/Candidate.md
 docs/CandidateApi.json
 docs/CandidateApi.md
+docs/Consultant.md
+docs/ConsultantApi.json
+docs/ConsultantApi.md
 docs/Municipality.md
 docs/MunicipalityApi.json
 docs/MunicipalityApi.md
@@ -17,9 +20,11 @@ mocha.opts
 package.json
 src/ApiClient.js
 src/api/CandidateApi.js
+src/api/ConsultantApi.js
 src/api/MunicipalityApi.js
 src/index.js
 src/model/Candidate.js
+src/model/Consultant.js
 src/model/Municipality.js
 src/model/MunicipalityMimage.js
 webpack.config.js

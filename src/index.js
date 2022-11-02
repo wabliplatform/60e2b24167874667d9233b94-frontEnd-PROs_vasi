@@ -14,9 +14,11 @@
 
 import ApiClient from './ApiClient';
 import Candidate from './model/Candidate';
+import Consultant from './model/Consultant';
 import Municipality from './model/Municipality';
 import MunicipalityMimage from './model/MunicipalityMimage';
 import CandidateApi from './api/CandidateApi';
+import ConsultantApi from './api/ConsultantApi';
 import MunicipalityApi from './api/MunicipalityApi';
 
 
@@ -65,6 +67,12 @@ export {
     Candidate,
 
     /**
+     * The Consultant model constructor.
+     * @property {module:model/Consultant}
+     */
+    Consultant,
+
+    /**
      * The Municipality model constructor.
      * @property {module:model/Municipality}
      */
@@ -81,6 +89,12 @@ export {
     * @property {module:api/CandidateApi}
     */
     CandidateApi,
+
+    /**
+    * The ConsultantApi service constructor.
+    * @property {module:api/ConsultantApi}
+    */
+    ConsultantApi,
 
     /**
     * The MunicipalityApi service constructor.
@@ -103,6 +117,12 @@ export default {
     Candidate,
 
     /**
+     * The Consultant model constructor.
+     * @property {module:model/Consultant}
+     */
+    Consultant,
+
+    /**
      * The Municipality model constructor.
      * @property {module:model/Municipality}
      */
@@ -119,6 +139,12 @@ export default {
     * @property {module:api/CandidateApi}
     */
     CandidateApi,
+
+    /**
+    * The ConsultantApi service constructor.
+    * @property {module:api/ConsultantApi}
+    */
+    ConsultantApi,
 
     /**
     * The MunicipalityApi service constructor.

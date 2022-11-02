@@ -1,4 +1,4 @@
-let apiCandidateApi = new TempApi.CandidateApi();import TempApi from '../src/index';let candidate = new TempApi.Candidate();document.getElementById('ifuuql').onclick = (event) => {
+let apiConsultantApi = new TempApi.ConsultantApi();import TempApi from '../src/index';let apiCandidateApi = new TempApi.CandidateApi();let candidate = new TempApi.Candidate();document.getElementById('ifuuql').onclick = (event) => {
     event.preventDefault();
     {   location.href= '/home' ;}};document.getElementById('if2fd').onclick = (event) => {
     event.preventDefault();
@@ -8,7 +8,9 @@ let apiCandidateApi = new TempApi.CandidateApi();import TempApi from '../src/ind
     event.preventDefault();
     {   location.href= '/cmunicipality' ;}};document.getElementById('iwssa').onclick = (event) => {
     event.preventDefault();
-    {   location.href= '/ccandidate' ;}};
+    {   location.href= '/ccandidate' ;}};document.getElementById('i6y8h').onclick = (event) => {
+    event.preventDefault();
+    {   location.href= '/cconsultant' ;}};
  function calculateSize(img, maxWidth, maxHeight) {
       let width = img.width;
       let height = img.height;
@@ -77,10 +79,54 @@ document.getElementById('formFile').addEventListener("change", async(e) => {
           QUALITY
         );
       };});
-document.getElementById('ia73f').onclick = (event) => {
+document.addEventListener('aligncconsultants', function(e) {
+  const advanceSelect = document.getElementById('iso6o');
+  const selectedElement = advanceSelect.getAttribute('selected-element');
+  if (!selectedElement) return;
+  [...advanceSelect.querySelectorAll("[annotationname]")].forEach(
+    optionElement => {
+      if (optionElement.value === selectedElement)
+        optionElement.setAttribute("selected", true);
+    }
+  );
+});document.getElementById('ia73f').onclick = (event) => {
     event.preventDefault();
     candidate['cimage'] = {
         data: document.querySelector("[annotationname = 'cimage']").getAttribute("data-image-base64") !== null ? document.querySelector("[annotationname = 'cimage']").getAttribute("data-image-base64") : document.querySelector("[annotationname = 'cimage']").src,
         name: document.querySelector("[annotationname = 'cimage']").getAttribute("name")
       };
-      candidate['cname'] = document.querySelector("[annotationname = 'cname']").value;candidate['cbio'] = document.querySelector("[annotationname = 'cbio']").value;apiCandidateApi.createcandidate( candidate, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); {   location.href= '/home' ;}}});};window.onload = () => {};
+      candidate['cname'] = document.querySelector("[annotationname = 'cname']").value;candidate['cbio'] = document.querySelector("[annotationname = 'cbio']").value;candidate["cconsultants"] = [...document.querySelector("[annotationname = 'cconsultants']").querySelectorAll("[arrayvalue]")].map(li=> li.getAttribute('arrayvalue'));apiCandidateApi.createcandidate( candidate, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); {   location.href= '/home' ;}}});};window.onload = () => {apiConsultantApi.getAllconsultant((error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); const subDataElements =[...document.getElementById("i6k9i").querySelectorAll( "[dataitem='true']" )].filter(
+    (element, index, array) =>
+    !array.reduce((hasAncestorFlag, dataItem) => hasAncestorFlag || (element.compareDocumentPosition(dataItem) & Node.DOCUMENT_POSITION_CONTAINS) === 8, false)
+  );const map = new Map();
+    if( data.length > subDataElements.length){
+      for(let i = 0; i <=  data.length - subDataElements.length; i++){
+        let parentNode = subDataElements[0].parentNode;
+        let child = parentNode.childNodes[0].cloneNode(true);
+        parentNode.appendChild(child);
+        subDataElements.push(child);
+      }
+    }
+    data.forEach((item,i) => {
+    if(subDataElements.length > i)
+      {
+        try { 
+      const insideSubDataElement = subDataElements[i].querySelector("[annotationname = 'consname']");
+      if(insideSubDataElement !== null){
+        insideSubDataElement.textContent = data[data.length -i -1].consname;
+        insideSubDataElement.value=data[data.length -i -1]._id;
+      }
+      else if(subDataElements[i].getAttribute('annotationname') === 'consname'){
+        subDataElements[i].textContent = data[data.length -i -1].consname;
+        subDataElements[i].value=data[data.length -i -1]._id;
+      }
+     } catch (e) { console.log(e) };
+        map.set(subDataElements[i].getAttribute('id'), data[data.length-i-1])
+        
+      }
+      document.dispatchEvent(new Event("aligncconsultants"))
+    });
+
+    window.localStorage.setItem('data', JSON.stringify(Array.from(map.entries())));
+    
+    [...subDataElements].forEach((element,index) => {if(index >= data.length) subDataElements[index].style.display = 'none';})}});};

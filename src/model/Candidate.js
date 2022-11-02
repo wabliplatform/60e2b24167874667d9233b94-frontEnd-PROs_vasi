@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import Consultant from './Consultant';
 import MunicipalityMimage from './MunicipalityMimage';
 
 /**
@@ -26,10 +27,11 @@ class Candidate {
      * @param cname {String} 
      * @param cbio {String} 
      * @param cimage {module:model/MunicipalityMimage} 
+     * @param cconsultants {Array.<module:model/Consultant>} 
      */
-    constructor(cname, cbio, cimage) { 
+    constructor(cname, cbio, cimage, cconsultants) { 
         
-        Candidate.initialize(this, cname, cbio, cimage);
+        Candidate.initialize(this, cname, cbio, cimage, cconsultants);
     }
 
     /**
@@ -37,10 +39,11 @@ class Candidate {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, cname, cbio, cimage) { 
+    static initialize(obj, cname, cbio, cimage, cconsultants) { 
         obj['cname'] = cname;
         obj['cbio'] = cbio;
         obj['cimage'] = cimage;
+        obj['cconsultants'] = cconsultants;
     }
 
     /**
@@ -65,6 +68,9 @@ class Candidate {
             }
             if (data.hasOwnProperty('cimage')) {
                 obj['cimage'] = MunicipalityMimage.constructFromObject(data['cimage']);
+            }
+            if (data.hasOwnProperty('cconsultants')) {
+                obj['cconsultants'] = ApiClient.convertToType(data['cconsultants'], [Consultant]);
             }
         }
         return obj;
@@ -92,6 +98,11 @@ Candidate.prototype['cbio'] = undefined;
  * @member {module:model/MunicipalityMimage} cimage
  */
 Candidate.prototype['cimage'] = undefined;
+
+/**
+ * @member {Array.<module:model/Consultant>} cconsultants
+ */
+Candidate.prototype['cconsultants'] = undefined;
 
 
 

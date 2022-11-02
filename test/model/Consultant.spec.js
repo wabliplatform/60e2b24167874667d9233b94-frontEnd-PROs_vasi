@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new TempApi.Candidate();
+    instance = new TempApi.Consultant();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,40 +47,34 @@
       object[property] = value;
   }
 
-  describe('Candidate', function() {
-    it('should create an instance of Candidate', function() {
-      // uncomment below and update the code to test Candidate
-      //var instane = new TempApi.Candidate();
-      //expect(instance).to.be.a(TempApi.Candidate);
+  describe('Consultant', function() {
+    it('should create an instance of Consultant', function() {
+      // uncomment below and update the code to test Consultant
+      //var instane = new TempApi.Consultant();
+      //expect(instance).to.be.a(TempApi.Consultant);
     });
 
     it('should have the property id (base name: "_id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new TempApi.Candidate();
+      //var instance = new TempApi.Consultant();
       //expect(instance).to.be();
     });
 
-    it('should have the property cname (base name: "cname")', function() {
-      // uncomment below and update the code to test the property cname
-      //var instance = new TempApi.Candidate();
+    it('should have the property consname (base name: "consname")', function() {
+      // uncomment below and update the code to test the property consname
+      //var instance = new TempApi.Consultant();
       //expect(instance).to.be();
     });
 
-    it('should have the property cbio (base name: "cbio")', function() {
-      // uncomment below and update the code to test the property cbio
-      //var instance = new TempApi.Candidate();
+    it('should have the property consimage (base name: "consimage")', function() {
+      // uncomment below and update the code to test the property consimage
+      //var instance = new TempApi.Consultant();
       //expect(instance).to.be();
     });
 
-    it('should have the property cimage (base name: "cimage")', function() {
-      // uncomment below and update the code to test the property cimage
-      //var instance = new TempApi.Candidate();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property cconsultants (base name: "cconsultants")', function() {
-      // uncomment below and update the code to test the property cconsultants
-      //var instance = new TempApi.Candidate();
+    it('should have the property consbio (base name: "consbio")', function() {
+      // uncomment below and update the code to test the property consbio
+      //var instance = new TempApi.Consultant();
       //expect(instance).to.be();
     });
 

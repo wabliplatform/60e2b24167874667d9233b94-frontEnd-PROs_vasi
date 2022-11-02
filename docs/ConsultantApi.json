@@ -1,0 +1,73 @@
+
+[{
+    "methodType":"POST",
+    "methodName":"createconsultant",
+    "returnType":{
+      "primitive":false,
+      "jsType":"",
+      "modelName":"Consultant"
+    },
+    "importStatement":"import TempApi from '../src/index';",
+    "apiInstance":"let apiConsultantApi = new TempApi.ConsultantApi();",
+    "importModelParameter":["let consultant = new TempApi.Consultant();"],
+    "modelNames":["consultant"],
+    "functionNextTemplate":"/**nextFunction*/",
+    "apiCallPromisified":"apiConsultantApi.createconsultant( consultant, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); /**nextFunction*/}});"
+  },{
+    "methodType":"DELETE",
+    "methodName":"deleteconsultant",
+    "returnType":{
+
+      "primitive":"true",
+      "type":"null"
+    },
+    "importStatement":"import TempApi from '../src/index';",
+    "apiInstance":"let apiConsultantApi = new TempApi.ConsultantApi();",
+    "importModelParameter":[],
+    "modelNames":[],
+    "functionNextTemplate":"/**nextFunction*/",
+    "apiCallPromisified":"apiConsultantApi.deleteconsultant( consultantId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully.');/**nextFunction*/}});"
+  },{
+    "methodType":"GETALL",
+    "methodName":"getAllconsultant",
+    "returnType":{
+      "primitive":false,
+      "jsType":"Array",
+      "modelName":"[Consultant]"
+    },
+    "importStatement":"import TempApi from '../src/index';",
+    "apiInstance":"let apiConsultantApi = new TempApi.ConsultantApi();",
+    "importModelParameter":[],
+    "modelNames":[],
+    "functionNextTemplate":"/**nextFunction*/",
+    "apiCallPromisified":"apiConsultantApi.getAllconsultant((error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); /**nextFunction*/}});"
+  },{
+    "methodType":"GET",
+    "methodName":"getconsultant",
+    "returnType":{
+      "primitive":false,
+      "jsType":"",
+      "modelName":"Consultant"
+    },
+    "importStatement":"import TempApi from '../src/index';",
+    "apiInstance":"let apiConsultantApi = new TempApi.ConsultantApi();",
+    "importModelParameter":[],
+    "modelNames":[],
+    "functionNextTemplate":"/**nextFunction*/",
+    "apiCallPromisified":"apiConsultantApi.getconsultant( consultantId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); /**nextFunction*/}});"
+  },{
+    "methodType":"PUT",
+    "methodName":"updateconsultant",
+    "returnType":{
+      "primitive":false,
+      "jsType":"",
+      "modelName":"Consultant"
+    },
+    "importStatement":"import TempApi from '../src/index';",
+    "apiInstance":"let apiConsultantApi = new TempApi.ConsultantApi();",
+    "importModelParameter":[],
+    "modelNames":[],
+    "functionNextTemplate":"/**nextFunction*/",
+    "apiCallPromisified":"apiConsultantApi.updateconsultant( consultantId, opts, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); /**nextFunction*/}});"
+  }
+]

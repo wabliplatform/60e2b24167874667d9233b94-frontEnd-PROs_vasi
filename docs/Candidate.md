@@ -8,5 +8,6 @@ Name | Type | Description | Notes
 **cname** | **String** |  | 
 **cbio** | **String** |  | 
 **cimage** | [**MunicipalityMimage**](MunicipalityMimage.md) |  | 
+**cconsultants** | [**[Consultant]**](Consultant.md) |  | 
 
 
