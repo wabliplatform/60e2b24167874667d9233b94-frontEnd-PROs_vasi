@@ -57,6 +57,14 @@ let apiCandidateApi = new TempApi.CandidateApi();import TempApi from '../src/ind
        try {
       const attributeSubdocumentElement = tableDataElement[
         index
+      ].querySelector("[annotationname = 'consname']");
+      if (attributeSubdocumentElement !== null) {
+        attributeSubdocumentElement.textContent = tableData[tableData.length - index -1].consname;
+      }
+    }
+    catch(e) {console.log(e);}; try {
+      const attributeSubdocumentElement = tableDataElement[
+        index
       ].querySelector("[annotationname = 'consimage']");
       if (attributeSubdocumentElement !== null) {
         attributeSubdocumentElement.src = tableData[tableData.length - index -1].consimage;
