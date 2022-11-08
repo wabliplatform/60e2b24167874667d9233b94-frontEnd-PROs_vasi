@@ -60,6 +60,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property mimage (base name: "mimage")', function() {
+      // uncomment below and update the code to test the property mimage
+      //var instance = new TempApi.Municipality();
+      //expect(instance).to.be();
+    });
+
     it('should have the property mname (base name: "mname")', function() {
       // uncomment below and update the code to test the property mname
       //var instance = new TempApi.Municipality();
@@ -68,12 +74,6 @@
 
     it('should have the property mcandidates (base name: "mcandidates")', function() {
       // uncomment below and update the code to test the property mcandidates
-      //var instance = new TempApi.Municipality();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property mimage (base name: "mimage")', function() {
-      // uncomment below and update the code to test the property mimage
       //var instance = new TempApi.Municipality();
       //expect(instance).to.be();
     });
