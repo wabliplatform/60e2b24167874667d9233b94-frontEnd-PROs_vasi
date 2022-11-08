@@ -11,6 +11,7 @@ module.exports = {
 	'ccandidate' : './javascript/ccandidate.js',
 	'cconsultant' : './javascript/cconsultant.js',
 	'consultant' : './javascript/consultant.js',
+	'Page10' : './javascript/Page10.js',
 },
   output: {
     path: path.resolve(__dirname, 'dist'),

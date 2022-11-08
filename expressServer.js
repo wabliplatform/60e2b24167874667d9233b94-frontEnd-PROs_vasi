@@ -38,6 +38,8 @@ class ExpressServer {
 			this.app.get('/cconsultant/:id', (req, res) => res.sendFile(path.join(__dirname,'html','cconsultant.html')));
 			this.app.get('/consultant', (req, res) => res.sendFile(path.join(__dirname,'html','consultant.html')));
 			this.app.get('/consultant/:id', (req, res) => res.sendFile(path.join(__dirname,'html','consultant.html')));
+			this.app.get('/Page10', (req, res) => res.sendFile(path.join(__dirname,'html','Page10.html')));
+			this.app.get('/Page10/:id', (req, res) => res.sendFile(path.join(__dirname,'html','Page10.html')));
 			
     }
   
