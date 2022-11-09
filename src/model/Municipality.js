@@ -24,13 +24,13 @@ class Municipality {
     /**
      * Constructs a new <code>Municipality</code>.
      * @alias module:model/Municipality
-     * @param mimage {module:model/MunicipalityMimage} 
      * @param mname {String} 
      * @param mcandidates {Array.<module:model/Candidate>} 
+     * @param mimage {module:model/MunicipalityMimage} 
      */
-    constructor(mimage, mname, mcandidates) { 
+    constructor(mname, mcandidates, mimage) { 
         
-        Municipality.initialize(this, mimage, mname, mcandidates);
+        Municipality.initialize(this, mname, mcandidates, mimage);
     }
 
     /**
@@ -38,10 +38,10 @@ class Municipality {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, mimage, mname, mcandidates) { 
-        obj['mimage'] = mimage;
+    static initialize(obj, mname, mcandidates, mimage) { 
         obj['mname'] = mname;
         obj['mcandidates'] = mcandidates;
+        obj['mimage'] = mimage;
     }
 
     /**
@@ -58,14 +58,14 @@ class Municipality {
             if (data.hasOwnProperty('_id')) {
                 obj['_id'] = ApiClient.convertToType(data['_id'], 'String');
             }
-            if (data.hasOwnProperty('mimage')) {
-                obj['mimage'] = MunicipalityMimage.constructFromObject(data['mimage']);
-            }
             if (data.hasOwnProperty('mname')) {
                 obj['mname'] = ApiClient.convertToType(data['mname'], 'String');
             }
             if (data.hasOwnProperty('mcandidates')) {
                 obj['mcandidates'] = ApiClient.convertToType(data['mcandidates'], [Candidate]);
+            }
+            if (data.hasOwnProperty('mimage')) {
+                obj['mimage'] = MunicipalityMimage.constructFromObject(data['mimage']);
             }
         }
         return obj;
@@ -80,11 +80,6 @@ class Municipality {
 Municipality.prototype['_id'] = undefined;
 
 /**
- * @member {module:model/MunicipalityMimage} mimage
- */
-Municipality.prototype['mimage'] = undefined;
-
-/**
  * @member {String} mname
  */
 Municipality.prototype['mname'] = undefined;
@@ -93,6 +88,11 @@ Municipality.prototype['mname'] = undefined;
  * @member {Array.<module:model/Candidate>} mcandidates
  */
 Municipality.prototype['mcandidates'] = undefined;
+
+/**
+ * @member {module:model/MunicipalityMimage} mimage
+ */
+Municipality.prototype['mimage'] = undefined;
 
 
 
