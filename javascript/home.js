@@ -8,32 +8,23 @@ let apiMunicipalityApi = new TempApi.MunicipalityApi();import TempApi from '../s
     event.preventDefault();
     {   location.href= '/cmunicipality' ;}};document.getElementById('iwssa').onclick = (event) => {
     event.preventDefault();
-    {   location.href= '/ccandidate' ;}};document.getElementById('i1gs8').onclick = (event) => {
-    event.preventDefault();
-    {  
-      let transitionId = window.location.href.split('/').at(-1);
-      let parentId = "";
-      const storedData = window.localStorage.getItem("data");
-      const newMap = new Map(JSON.parse(storedData));
-      newMap.forEach((value, key) => {
-        if (
-          document.getElementById(key) !== null &&
-          document
-            .getElementById(key)
-            .contains(document.getElementById("i1gs8")) === true &&
-            document.getElementById(key).contains(document.getElementById(parentId)) === false
-        ) {
-          transitionId = value._id;
-          parentId = key;
-        }
-      });
-     location.href= '/mcandidates/' + transitionId;}};window.onload = () => {apiMunicipalityApi.getAllmunicipality((error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); const subDataElements =[...document.getElementById("i9pjj").querySelectorAll( "[dataitem='true']" )].filter(
+    {   location.href= '/ccandidate' ;}};window.onload = () => {apiMunicipalityApi.getAllmunicipality((error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); const subDataElements =[...document.getElementById("iof5e-2").querySelectorAll( "[dataitem='true']" )].filter(
     (element, index, array) =>
     !array.reduce((hasAncestorFlag, dataItem) => hasAncestorFlag || (element.compareDocumentPosition(dataItem) & Node.DOCUMENT_POSITION_CONTAINS) === 8, false)
   );const map = new Map();  data.forEach((item,i) => {
     if(subDataElements.length > i)
       {
         try { 
+const insideSubDataElement = subDataElements[i].querySelector("[annotationname = 'mimage']");
+if(insideSubDataElement !== null && data[data.length -i -1].mimage !== undefined){
+  insideSubDataElement.src = data[data.length -i -1].mimage.data;
+  insideSubDataElement.name = data[data.length -i -1].mimage.name;
+}
+else if(subDataElements[i].getAttribute('annotationname') === 'mimage' && data[data.length -i -1].mimage !== undefined){
+  subDataElements[i].src = data[data.length -i -1].mimage.data;
+  subDataElements[i].name = data[data.length -i -1].mimage.name;
+}
+ } catch (e) { console.log(e) };try { 
       const insideSubDataElement = subDataElements[i].querySelector("[annotationname = 'mname']");
       if(insideSubDataElement !== null){
         insideSubDataElement.textContent = data[data.length -i -1].mname;
