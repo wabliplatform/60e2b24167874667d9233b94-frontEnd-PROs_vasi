@@ -464,7 +464,7 @@ let apiMunicipalityApi = new TempApi.MunicipalityApi();import TempApi from '../s
           parentId = key;
         }
       });
-     location.href= '/upmunicipality/' + transitionId;}};window.onload = () => {apiMunicipalityApi.getAllmunicipality((error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); const subDataElements =[...document.getElementById("iof5e").querySelectorAll( "[dataitem='true']" )].filter(
+     location.href= '/upmunicipality/' + transitionId;}};window.onload = () => {apiMunicipalityApi.getAllmunicipality((error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); const subDataElements =[...document.getElementById("i9e5o").querySelectorAll( "[dataitem='true']" )].filter(
     (element, index, array) =>
     !array.reduce((hasAncestorFlag, dataItem) => hasAncestorFlag || (element.compareDocumentPosition(dataItem) & Node.DOCUMENT_POSITION_CONTAINS) === 8, false)
   );const map = new Map();  data.forEach((item,i) => {
