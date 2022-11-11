@@ -1,8 +1,8 @@
 let apiConsultantApi = new TempApi.ConsultantApi();import TempApi from '../src/index';let consultant = new TempApi.Consultant();document.getElementById('ifuuql').onclick = (event) => {
     event.preventDefault();
-    {   location.href= '/home' ;}};document.getElementById('if2fd').onclick = (event) => {
+    {   location.href= '/' ;}};document.getElementById('if2fd').onclick = (event) => {
     event.preventDefault();
-    {   location.href= '/home' ;}};document.getElementById('i4e9ar').onclick = (event) => {
+    {   location.href= '/' ;}};document.getElementById('i4e9ar').onclick = (event) => {
     event.preventDefault();
     {   location.href= '/allcandidates' ;}};document.getElementById('i7e5h').onclick = (event) => {
     event.preventDefault();
@@ -83,4 +83,4 @@ document.getElementById('ia73f').onclick = (event) => {
         data: document.querySelector("[annotationname = 'consimage']").getAttribute("data-image-base64") !== null ? document.querySelector("[annotationname = 'consimage']").getAttribute("data-image-base64") : document.querySelector("[annotationname = 'consimage']").src,
         name: document.querySelector("[annotationname = 'consimage']").getAttribute("name")
       };
-      consultant['consbio'] = document.querySelector("[annotationname = 'consbio']").value;apiConsultantApi.createconsultant( consultant, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); {   location.href= '/home' ;}}});};window.onload = () => {};
+      consultant['consbio'] = document.querySelector("[annotationname = 'consbio']").value;apiConsultantApi.createconsultant( consultant, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); {   location.href= '/' ;}}});};window.onload = () => {};

@@ -2,7 +2,6 @@ const path = require('path');
 
 module.exports = {
   entry: {
-	'home' : './javascript/home.js',
 	'mcandidates' : './javascript/mcandidates.js',
 	'allcandidates' : './javascript/allcandidates.js',
 	'candidate' : './javascript/candidate.js',

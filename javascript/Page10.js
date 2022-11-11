@@ -1,8 +1,8 @@
 let apiMunicipalityApi = new TempApi.MunicipalityApi();import TempApi from '../src/index';document.getElementById('ifuuql').onclick = (event) => {
     event.preventDefault();
-    {   location.href= '/home' ;}};document.getElementById('if2fd').onclick = (event) => {
+    {   location.href= '/' ;}};document.getElementById('if2fd').onclick = (event) => {
     event.preventDefault();
-    {   location.href= '/home' ;}};document.getElementById('i4e9ar').onclick = (event) => {
+    {   location.href= '/' ;}};document.getElementById('i4e9ar').onclick = (event) => {
     event.preventDefault();
     {   location.href= '/allcandidates' ;}};document.getElementById('i7e5h').onclick = (event) => {
     event.preventDefault();

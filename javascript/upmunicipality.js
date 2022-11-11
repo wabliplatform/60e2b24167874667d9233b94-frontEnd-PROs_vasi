@@ -1,8 +1,8 @@
 let apiMunicipalityApi = new TempApi.MunicipalityApi();import TempApi from '../src/index';let apiCandidateApi = new TempApi.CandidateApi();document.getElementById('ifuuql').onclick = (event) => {
     event.preventDefault();
-    {   location.href= '/home' ;}};document.getElementById('if2fd').onclick = (event) => {
+    {   location.href= '/' ;}};document.getElementById('if2fd').onclick = (event) => {
     event.preventDefault();
-    {   location.href= '/home' ;}};document.getElementById('i4e9ar').onclick = (event) => {
+    {   location.href= '/' ;}};document.getElementById('i4e9ar').onclick = (event) => {
     event.preventDefault();
     {   location.href= '/allcandidates' ;}};document.getElementById('i7e5h').onclick = (event) => {
     event.preventDefault();
@@ -138,7 +138,7 @@ document.addEventListener('alignmcandidates', function(e) {
         }
         document.querySelector('[annotationname = mimage]').name = response.body.query.mimage.name;
       }
-      document.querySelector('[annotationname = mname]').value = response.body.query.mname ;initializearrayiz4py(response.body.query.mcandidates|| []) ; {   location.href= '/home' ;}}});};document.getElementById('ie5fl').onclick = (event) => {
+      document.querySelector('[annotationname = mname]').value = response.body.query.mname ;initializearrayiz4py(response.body.query.mcandidates|| []) ; {   location.href= '/' ;}}});};document.getElementById('ie5fl').onclick = (event) => {
     event.preventDefault();
     let municipalityId = window.location.pathname.replace('/upmunicipality/','');
       if(municipalityId === '/upmunicipality' || municipalityId === ''){
@@ -157,7 +157,7 @@ document.addEventListener('alignmcandidates', function(e) {
           }
         });
       }
-    apiMunicipalityApi.deletemunicipality( municipalityId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully.');{   location.href= '/home' ;}}});};window.onload = () => {let municipalityId = window.location.pathname.replace('/upmunicipality/','');apiMunicipalityApi.getmunicipality( municipalityId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); const map = new Map();try { document.querySelector('[annotationname = mname]').value = response.body.query.mname; } catch (e) { console.log(e) };try { 
+    apiMunicipalityApi.deletemunicipality( municipalityId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully.');{   location.href= '/' ;}}});};window.onload = () => {let municipalityId = window.location.pathname.replace('/upmunicipality/','');apiMunicipalityApi.getmunicipality( municipalityId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); const map = new Map();try { document.querySelector('[annotationname = mname]').value = response.body.query.mname; } catch (e) { console.log(e) };try { 
       if(response.body.query.mimage !== undefined){
         if(document.querySelector('[annotationname = mimage]').getAttribute('type') === 'file'){
           document.querySelector('[annotationname = mimage]').setAttribute('data-image-base64',response.body.query.mimage.data);

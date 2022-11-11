@@ -1,8 +1,8 @@
 let apiConsultantApi = new TempApi.ConsultantApi();import TempApi from '../src/index';let apiCandidateApi = new TempApi.CandidateApi();let candidate = new TempApi.Candidate();document.getElementById('ifuuql').onclick = (event) => {
     event.preventDefault();
-    {   location.href= '/home' ;}};document.getElementById('if2fd').onclick = (event) => {
+    {   location.href= '/' ;}};document.getElementById('if2fd').onclick = (event) => {
     event.preventDefault();
-    {   location.href= '/home' ;}};document.getElementById('i4e9ar').onclick = (event) => {
+    {   location.href= '/' ;}};document.getElementById('i4e9ar').onclick = (event) => {
     event.preventDefault();
     {   location.href= '/allcandidates' ;}};document.getElementById('i7e5h').onclick = (event) => {
     event.preventDefault();
@@ -130,7 +130,7 @@ document.addEventListener('aligncconsultants', function(e) {
         data: document.querySelector("[annotationname = 'cimage']").getAttribute("data-image-base64") !== null ? document.querySelector("[annotationname = 'cimage']").getAttribute("data-image-base64") : document.querySelector("[annotationname = 'cimage']").src,
         name: document.querySelector("[annotationname = 'cimage']").getAttribute("name")
       };
-      candidate['cname'] = document.querySelector("[annotationname = 'cname']").value;candidate['cbio'] = document.querySelector("[annotationname = 'cbio']").value;candidate["cconsultants"] = [...document.querySelector("[annotationname = 'cconsultants']").querySelectorAll("[arrayvalue]")].map(li=> li.getAttribute('arrayvalue'));apiCandidateApi.createcandidate( candidate, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); {   location.href= '/home' ;}}});};window.onload = () => {apiConsultantApi.getAllconsultant((error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); const subDataElements =[...document.getElementById("ifj1f").querySelectorAll( "[dataitem='true']" )].filter(
+      candidate['cname'] = document.querySelector("[annotationname = 'cname']").value;candidate['cbio'] = document.querySelector("[annotationname = 'cbio']").value;candidate["cconsultants"] = [...document.querySelector("[annotationname = 'cconsultants']").querySelectorAll("[arrayvalue]")].map(li=> li.getAttribute('arrayvalue'));apiCandidateApi.createcandidate( candidate, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); {   location.href= '/' ;}}});};window.onload = () => {apiConsultantApi.getAllconsultant((error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); const subDataElements =[...document.getElementById("ifj1f").querySelectorAll( "[dataitem='true']" )].filter(
     (element, index, array) =>
     !array.reduce((hasAncestorFlag, dataItem) => hasAncestorFlag || (element.compareDocumentPosition(dataItem) & Node.DOCUMENT_POSITION_CONTAINS) === 8, false)
   );const map = new Map();

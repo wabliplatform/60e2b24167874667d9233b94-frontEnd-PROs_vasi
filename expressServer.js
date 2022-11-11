@@ -19,9 +19,7 @@ class ExpressServer {
       this.app.use(express.urlencoded({ extended: false }));
       this.app.use(cookieParser());
       this.app.use(express.static(__dirname));
-      this.app.get('/', (req, res) => res.sendFile(path.join(__dirname,'html','home.html')));
-			this.app.get('/home', (req, res) => res.sendFile(path.join(__dirname,'html','home.html')));
-			this.app.get('/home/:id', (req, res) => res.sendFile(path.join(__dirname,'html','home.html')));
+      this.app.get('/', (req, res) => res.sendFile(path.join(__dirname,'html','mcandidates.html')));
 			this.app.get('/mcandidates', (req, res) => res.sendFile(path.join(__dirname,'html','mcandidates.html')));
 			this.app.get('/mcandidates/:id', (req, res) => res.sendFile(path.join(__dirname,'html','mcandidates.html')));
 			this.app.get('/allcandidates', (req, res) => res.sendFile(path.join(__dirname,'html','allcandidates.html')));
