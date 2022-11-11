@@ -2,6 +2,7 @@ const path = require('path');
 
 module.exports = {
   entry: {
+	'Page10' : './javascript/Page10.js',
 	'mcandidates' : './javascript/mcandidates.js',
 	'allcandidates' : './javascript/allcandidates.js',
 	'candidate' : './javascript/candidate.js',
@@ -10,7 +11,6 @@ module.exports = {
 	'ccandidate' : './javascript/ccandidate.js',
 	'cconsultant' : './javascript/cconsultant.js',
 	'consultant' : './javascript/consultant.js',
-	'Page10' : './javascript/Page10.js',
 },
   output: {
     path: path.resolve(__dirname, 'dist'),
