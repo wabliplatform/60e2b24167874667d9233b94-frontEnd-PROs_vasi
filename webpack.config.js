@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   entry: {
-	'Page10' : './javascript/Page10.js',
+	'Home' : './javascript/Home.js',
 	'mcandidates' : './javascript/mcandidates.js',
 	'allcandidates' : './javascript/allcandidates.js',
 	'candidate' : './javascript/candidate.js',

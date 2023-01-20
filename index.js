@@ -7,7 +7,7 @@ const launchServer = async () => {
       this.expressServer = new ExpressServer(config.URL_PORT);
       this.expressServer.launch();
       console.log('Express server running');
-      await open('http://localhost:'+config.URL_PORT+'/Page10');
+      await open('http://localhost:'+config.URL_PORT+'/Home');
     } catch (error) {
       console.error('Express Server failure', error.message);
       await this.close();
